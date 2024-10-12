@@ -23,7 +23,7 @@ App As appinfo:
         );
         Refresh(BD_Industrial_training_Login);
         Refresh(BD_Ind_Stream);
-        Refresh(BD_Ind_train_Bib)
+        Refresh(BD_TRNMT)
     StartScreen: ='Inicio-NV'
     Theme: =PowerAppsTheme
 

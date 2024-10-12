@@ -132,7 +132,7 @@ edit_exam_done As screen:
         BorderStyle: =BorderStyle.None
         DelayItemLoading: =true
         Height: =450
-        Items: =Filter(BD_Ind_train_Bib, ID = 126)
+        Items: =Filter(BD_TRNMT, ID = 126)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0

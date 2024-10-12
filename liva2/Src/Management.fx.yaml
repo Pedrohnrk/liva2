@@ -1,5 +1,5 @@
 "Management As screen.'welcomeLayout_ver1.0'":
-    BackgroundImage: ='999 (2) (2) (2)'
+    BackgroundImage: =bgg
     ImagePosition: =ImagePosition.Fill
     OnVisible: =Set(CadastroColaborador,false);Refresh(BD_Industrial_training_Login);Set(varNovo_Trein,false);Set(varVinculo,false)
 
@@ -236,7 +236,7 @@
                 Image35 As image:
                     BorderStyle: =BorderStyle.None
                     Height: =Parent.Height /1.4
-                    Image: ='Industrial (2)'
+                    Image: =bgg
                     ImagePosition: =ImagePosition.Fill
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -318,7 +318,7 @@
                     BorderStyle: =BorderStyle.None
                     Height: |
                         =Parent.Height /1.4
-                    Image: ='02'
+                    Image: =bgg
                     ImagePosition: =ImagePosition.Fill
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -400,7 +400,7 @@
                 Image35_2 As image:
                     BorderStyle: =BorderStyle.None
                     Height: =Parent.Height /1.4
-                    Image: =ViewTeams
+                    Image: =bgg
                     ImagePosition: =ImagePosition.Fill
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -419,7 +419,7 @@
                     DisabledBorderColor: =RGBA(76, 211, 252, 1)
                     DisabledColor: =RGBA(102, 182, 227, 1)
                     DisabledFill: =RGBA(255, 255, 255, 0.26)
-                    DisplayMode: =If(LookUp(BD_Industrial_training_Login,Email = User().Email,Tipo_acesso)="Gestor",DisplayMode.Edit,DisplayMode.Disabled)
+                    DisplayMode: =If(LookUp(BD_LOG,Email = User().Email,Tipo_acesso)="Gestor",DisplayMode.Edit,DisplayMode.Disabled)
                     Fill: =RGBA(0, 0, 0, 0)
                     Font: =Font.'Segoe UI'
                     Height: =Parent.Height-2
@@ -482,7 +482,7 @@
                 Image35_3 As image:
                     BorderStyle: =BorderStyle.None
                     Height: =Parent.Height - Button2_10.Height
-                    Image: ='Industrial (2)'
+                    Image: =bgg
                     ImagePosition: =ImagePosition.Fill
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -573,7 +573,7 @@
                     Height: =50
                     HoverColor: =RGBA(102, 182, 227, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    OnSelect: =Set(varNovo_Trein,true);ClearCollect(COL_Trilhas, AddColumns(Defaults(BD_Ind_train_Bib), index, 1));Set(varIMG_RESET,true)
+                    OnSelect: =Set(varNovo_Trein,true);ClearCollect(COL_Trilhas, AddColumns(Defaults(BD_TRNMT), index, 1));Set(varIMG_RESET,true)
                     PaddingBottom: =0
                     PaddingLeft: =8
                     PaddingRight: =8
@@ -596,7 +596,7 @@
                 Image35_4 As image:
                     BorderStyle: =BorderStyle.None
                     Height: =Parent.Height /1.4
-                    Image: ='BG-HOME'
+                    Image: =bgg
                     ImagePosition: =ImagePosition.Fill
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -636,7 +636,7 @@
                     HoverBorderColor: =RGBA(40, 134, 222, 1)
                     HoverColor: =RGBA(102, 182, 227, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    OnSelect: =Set(varNovo_Trein,true);ClearCollect(COL_Trilhas, AddColumns(Defaults(BD_Ind_train_Bib), index, 1));Set(varIMG_RESET,true)
+                    OnSelect: =Set(varNovo_Trein,true);ClearCollect(COL_Trilhas, AddColumns(Defaults(BD_TRNMT), index, 1));Set(varIMG_RESET,true)
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
@@ -911,7 +911,7 @@
                 Image35_7 As image:
                     BorderStyle: =BorderStyle.None
                     Height: =Parent.Height /1.4
-                    Image: ='11'
+                    Image: =bgg
                     ImagePosition: =ImagePosition.Fill
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
@@ -3279,7 +3279,7 @@
                                     Label9_21 As label:
                                         Height: =98
                                         OnSelect: =Select(Parent)
-                                        Text: =LookUp(BD_Industrial_training_Login,Email = Title1_7.Text, Título)
+                                        Text: =LookUp(BD_LOG,Email = Title1_7.Text, Título)
                                         Visible: =false
                                         Width: =Parent.TemplateWidth
                                         Y: =40
@@ -3554,7 +3554,7 @@
                                     BorderThickness: =3
                                     Height: =45
                                     HoverBorderColor: =RGBA(71, 158, 245, 1)
-                                    Image: =LookUp(BD_Ind_train_Bib,Curso = Title5_4.Text,Capa.Full)
+                                    Image: =LookUp(BD_TRNMT,Curso = Title5_4.Text,Capa.Full)
                                     ImagePosition: =ImagePosition.Fill
                                     OnSelect: =Select(Parent)
                                     RadiusBottomLeft: =2
@@ -3590,7 +3590,7 @@
                                     Align: =Align.Center
                                     Height: =50
                                     OnSelect: =Select(Parent)
-                                    Text: =LookUp(BD_Ind_train_Bib,Curso = Title5_4.Text,ID_Lession)
+                                    Text: =LookUp(BD_TRNMT,Curso = Title5_4.Text,ID_Lession)
                                     Visible: =false
                                     Width: =70
                                     X: =566
@@ -3650,7 +3650,7 @@
                                     Align: =Align.Center
                                     Height: =56
                                     OnSelect: =Select(Parent)
-                                    Text: =LookUp(BD_Ind_train_Bib,Curso = Title5_4.Text,ID)
+                                    Text: =LookUp(BD_TRNMT,Curso = Title5_4.Text,ID)
                                     Visible: =false
                                     Width: =112
                                     X: =566
@@ -3661,7 +3661,7 @@
                                 DelayItemLoading: =true
                                 Height: =10
                                 Items: |
-                                    =Sort(Distinct(BD_Ind_train_Bib,Curso),Value,SortOrder.Ascending)
+                                    =Sort(Distinct(BD_TRNMT,Curso),Value,SortOrder.Ascending)
                                 Layout: =Layout.Vertical
                                 LayoutMinHeight: =1
                                 LayoutMinWidth: =320
@@ -3745,7 +3745,7 @@
                                 BorderColor: =RGBA(180, 214, 250, 1)
                                 BorderThickness: =2
                                 Height: =72
-                                Image: =LookUp(BD_Ind_train_Bib,Curso = Label8_12.Text,Capa.Full)
+                                Image: =LookUp(BD_TRNMT,Curso = Label8_12.Text,Capa.Full)
                                 ImagePosition: =ImagePosition.Fill
                                 OnSelect: =Select(Parent)
                                 RadiusBottomLeft: =2
@@ -3787,7 +3787,7 @@
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =12
-                                Text: =LookUp(BD_Ind_train_Bib,Curso = Label8_12.Text,ID_Lession)
+                                Text: =LookUp(BD_TRNMT,Curso = Label8_12.Text,ID_Lession)
                                 VerticalAlign: =VerticalAlign.Top
                                 Visible: =false
                                 Width: =Title7_3.Width
@@ -4077,12 +4077,12 @@
                             AcceptsFocus: =Parent.Width
                             BorderColor: =RGBA(8, 90, 140, 1)
                             BorderStyle: =BorderStyle.None
-                            DataSource: =BD_Ind_train_Bib
+                            DataSource: =BD_TRNMT
                             DefaultMode: =FormMode.New
                             Height: =Parent.Height
                             OnFailure: =NotificationType.Error
                             OnSuccess: |-
-                                =Patch(BD_Ind_train_Bib, LookUp(BD_Ind_train_Bib, ID = Form3_6.LastSubmit.ID), {Caminho: Last(Form3_6.LastSubmit.Anexos).AbsoluteUri});NewForm(Form3_6);Set(varNovo_Trein,false)
+                                =Patch(BD_TRNMT, LookUp(BD_TRNMT, ID = Form3_6.LastSubmit.ID), {Caminho: Last(Form3_6.LastSubmit.Anexos).AbsoluteUri});NewForm(Form3_6);Set(varNovo_Trein,false)
                             Width: =Parent.Width
                             ZIndex: =1
 
@@ -4091,10 +4091,10 @@
                                 DataField: ="Curso"
                                 Default: =ThisItem.Curso
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Curso)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Curso)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =80
-                                MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Curso)
+                                MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Curso)
                                 Required: =false
                                 Update: =DataCardValue16_3.Text
                                 Width: =908
@@ -4175,10 +4175,10 @@
                                 DataField: ="ID_training"
                                 Default: =ThisItem.ID_training
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,ID_training)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,ID_training)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =80
-                                MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, ID_training)
+                                MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, ID_training)
                                 Required: =false
                                 Update: =DataCardValue29_9.Text
                                 Width: =454
@@ -4258,10 +4258,10 @@
                                 DataField: ="Trilha"
                                 Default: =ThisItem.Trilha
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Trilha)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Trilha)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =80
-                                MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Trilha)
+                                MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Trilha)
                                 Required: =false
                                 Update: =DataCardValue25_12.Text
                                 Visible: =true
@@ -4341,10 +4341,10 @@
                                 DataField: ="Txtimg"
                                 Default: =ThisItem.ID_Lession
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,ID_Lession)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,ID_Lession)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =50
-                                MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, ID_Lession)
+                                MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, ID_Lession)
                                 Required: =false
                                 Update: =DataCardValue28_9.Text
                                 Width: =454
@@ -4398,7 +4398,7 @@
                                     BorderColor: =RGBA(255, 255, 255, 1)
                                     BorderThickness: =4
                                     Color: =RGBA(62, 128, 149, 1)
-                                    Default: =If(LookUp(BD_Ind_train_Bib,Curso = DataCardValue16_3.Text,ID_Lession)=Blank(),"1")
+                                    Default: =If(LookUp(BD_TRNMT,Curso = DataCardValue16_3.Text,ID_Lession)=Blank(),"1")
                                     DelayOutput: =true
                                     DisplayMode: =Parent.DisplayMode
                                     Fill: =RGBA(207, 227, 232, 1)
@@ -4419,7 +4419,7 @@
                                     ZIndex: =5
 
                                 Label14_9 As label:
-                                    Text: =LookUp(BD_Ind_train_Bib,Curso = DataCardValue16_3.Text,ID_Lession)
+                                    Text: =LookUp(BD_TRNMT,Curso = DataCardValue16_3.Text,ID_Lession)
                                     X: =66
                                     Y: =21
                                     ZIndex: =6
@@ -4429,10 +4429,10 @@
                                 DataField: ="Sinopse"
                                 Default: =ThisItem.Sinopse
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Sinopse)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Sinopse)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =107
-                                MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Sinopse)
+                                MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Sinopse)
                                 Required: =false
                                 Update: =DataCardValue30_11.Text
                                 Width: =908
@@ -4512,10 +4512,10 @@
                                 DataField: ="Dura_x00e7__x00e3_o"
                                 Default: =ThisItem.Duração
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Duração)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Duração)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =89
-                                MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Duração)
+                                MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Duração)
                                 Required: =false
                                 Update: =DataCardValue26_9.Text
                                 Width: =454
@@ -4593,7 +4593,7 @@
                                 DataField: ="Capa"
                                 Default: =ThisItem.Capa
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Capa)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Capa)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =157
                                 Required: =false
@@ -4672,7 +4672,7 @@
                                 DataField: ="Capa_trilha"
                                 Default: =ThisItem.Capa_trilha
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Capa_trilha)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Capa_trilha)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =167
                                 Required: =false
@@ -4751,7 +4751,7 @@
                                 DataField: ="{Attachments}"
                                 Default: =ThisItem.Anexos
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Anexos)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Anexos)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =157
                                 Required: =false
@@ -4832,10 +4832,10 @@
                                 DataField: ="Caminho"
                                 Default: =ThisItem.Caminho
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Caminho)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Caminho)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =50
-                                MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Caminho)
+                                MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Caminho)
                                 Required: =false
                                 Update: =DataCardValue27_9.Text
                                 Visible: =false
@@ -4914,10 +4914,10 @@
                                 DataField: ="Video_Column"
                                 Default: =ThisItem.Video_Column
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Video_Column)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Video_Column)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =50
-                                MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Video_Column)
+                                MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Video_Column)
                                 Required: =false
                                 Update: =DataCardValue31_9.Text
                                 Visible: =false
@@ -4991,10 +4991,10 @@
                                 DataField: ="Title"
                                 Default: =ThisItem.Título
                                 DisplayMode: =Parent.DisplayMode
-                                DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Título)
+                                DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Título)
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Height: =50
-                                MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Título)
+                                MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Título)
                                 Required: =false
                                 Update: =DataCardValue13_4.Text
                                 Visible: =false
@@ -5115,7 +5115,7 @@
 
         Image11 As image:
             Height: =Parent.Height
-            Image: =BG_Gestor_final
+            Image: =bgg
             ImagePosition: =ImagePosition.Fill
             Width: =Parent.Width
             ZIndex: =1
@@ -5255,7 +5255,7 @@
                                 BorderStyle: =BorderStyle.None
                                 DelayItemLoading: =true
                                 Height: =549
-                                Items: =Sort(Distinct(BD_Ind_train_Bib,Curso),Value,SortOrder.Ascending)
+                                Items: =Sort(Distinct(BD_TRNMT,Curso),Value,SortOrder.Ascending)
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
@@ -5268,7 +5268,7 @@
 
                                 Image27_6 As image:
                                     Height: =72
-                                    Image: =LookUp(BD_Ind_train_Bib,Curso = Title3_6.Text,Capa)
+                                    Image: =LookUp(BD_TRNMT,Curso = Title3_6.Text,Capa)
                                     ImagePosition: =ImagePosition.Fill
                                     OnSelect: =Select(Parent)
                                     RadiusBottomLeft: =8
@@ -5479,7 +5479,7 @@
                                 BorderStyle: =BorderStyle.None
                                 DelayItemLoading: =true
                                 Height: =Parent.Height - 100
-                                Items: =Filter(BD_Ind_train_Bib,Curso = varTrilha2)
+                                Items: =Filter(BD_TRNMT,Curso = varTrilha2)
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
@@ -5620,7 +5620,7 @@
                                     ZIndex: =5
 
                                 Label8_11 As label:
-                                    Text: =LookUp(BD_ind_exam,ID_Treinamento = Title3_7.Text, "true")
+                                    Text: =LookUp(BD_PRVS,ID_Treinamento = Title3_7.Text, "true")
                                     Visible: =false
                                     X: =111
                                     Y: =27

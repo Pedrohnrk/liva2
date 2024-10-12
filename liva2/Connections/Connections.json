@@ -61,6 +61,25 @@
             "tableName": "b36de0b4-67d2-4d9a-9454-383b8e0b3fc7"
           }
         }
+      },
+      "https://livahoteis.sharepoint.com": {
+        "dataSources": {
+          "BD_LOG": {
+            "tableName": "281b0e42-4fdf-456a-a7be-6c90060056f4"
+          },
+          "BD_PRVS": {
+            "tableName": "9982593f-e61c-4fdf-b68b-cb9df63f8ddd"
+          },
+          "BD_RSPT_PRV": {
+            "tableName": "ad91e8b4-4c7c-4abd-9d39-60d3dc5bb5be"
+          },
+          "BD_TRNMT": {
+            "tableName": "ef889240-99e7-4045-8ce5-4a6930c49f45"
+          },
+          "BD_VCLO_COLAB": {
+            "tableName": "e38bb917-736e-4002-a8bb-5925fdad2c43"
+          }
+        }
       }
     },
     "dataSources": [
@@ -71,7 +90,12 @@
       "BD_Ind_Ans_Exam",
       "BD_Industries_Progress",
       "BD_Ind_Stream",
-      "BD_Centros_Agri_Foods_PH"
+      "BD_Centros_Agri_Foods_PH",
+      "BD_LOG",
+      "BD_PRVS",
+      "BD_RSPT_PRV",
+      "BD_TRNMT",
+      "BD_VCLO_COLAB"
     ],
     "dependencies": {},
     "dependents": [],

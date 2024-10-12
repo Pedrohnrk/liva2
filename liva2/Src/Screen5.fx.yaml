@@ -48,7 +48,7 @@
                     "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                         DelayItemLoading: =true
                         Height: =549
-                        Items: =Distinct(BD_Ind_train_Bib,Curso)
+                        Items: =Distinct(BD_TRNMT,Curso)
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplatePadding: =0
@@ -61,7 +61,7 @@
 
                         Image27 As image:
                             Height: =72
-                            Image: =LookUp(BD_Ind_train_Bib,Curso = Title3.Text,Capa)
+                            Image: =LookUp(BD_TRNMT,Curso = Title3.Text,Capa)
                             ImagePosition: =ImagePosition.Fill
                             OnSelect: =Select(Parent)
                             RadiusBottomLeft: =8
@@ -244,7 +244,7 @@
                     "Gallery6_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                         DelayItemLoading: =true
                         Height: =547
-                        Items: =Filter(BD_Ind_train_Bib,Curso = varTrilha2)
+                        Items: =Filter(BD_TRNMT,Curso = varTrilha2)
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplatePadding: =0

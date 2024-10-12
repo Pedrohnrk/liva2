@@ -64,7 +64,7 @@
 
                     FormViewer1 As formViewer:
                         BorderStyle: =BorderStyle.None
-                        DataSource: =BD_Ind_train_Bib
+                        DataSource: =BD_TRNMT
                         Height: =10
                         Item: =Gallery2_3.Selected
                         Visible: =false
@@ -77,7 +77,7 @@
                             DataField: ="{FullPath}"
                             Default: =ThisItem.'Caminho Completo'
                             DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,'Caminho Completo')
+                            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,'Caminho Completo')
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =40
                             Required: =false
@@ -116,7 +116,7 @@
                             DataField: ="Video_Column"
                             Default: =ThisItem.Video_Column
                             DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Video_Column)
+                            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Video_Column)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =40
                             Required: =false
@@ -155,7 +155,7 @@
                             DataField: ="Title"
                             Default: =ThisItem.Título
                             DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Título)
+                            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Título)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =40
                             Required: =false
@@ -194,7 +194,7 @@
                             DataField: ="Curso"
                             Default: =ThisItem.Curso
                             DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Curso)
+                            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Curso)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =40
                             Required: =false
@@ -233,7 +233,7 @@
                             DataField: ="Trilha"
                             Default: =ThisItem.Trilha
                             DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Trilha)
+                            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Trilha)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =40
                             Required: =false
@@ -272,7 +272,7 @@
                             DataField: ="Dura_x00e7__x00e3_o"
                             Default: =ThisItem.Duração
                             DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Duração)
+                            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Duração)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =40
                             Required: =false
@@ -311,7 +311,7 @@
                             DataField: ="Capa"
                             Default: =ThisItem.Capa
                             DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Capa)
+                            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Capa)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =50
                             Required: =false
@@ -346,7 +346,7 @@
                             DataField: ="Caminho"
                             Default: =ThisItem.Caminho
                             DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Caminho)
+                            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Caminho)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =40
                             Required: =false
@@ -385,7 +385,7 @@
                             DataField: ="Capa_trilha"
                             Default: =ThisItem.Capa_trilha
                             DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Capa_trilha)
+                            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Capa_trilha)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =50
                             Required: =false
@@ -420,7 +420,7 @@
                             DataField: ="Txtimg"
                             Default: =ThisItem.ID_Lession
                             DisplayMode: =DisplayMode.View
-                            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,ID_Lession)
+                            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,ID_Lession)
                             Fill: =RGBA(0, 0, 0, 0)
                             Height: =40
                             Required: =false

@@ -19,7 +19,7 @@ edit_exam As screen:
         BorderStyle: =BorderStyle.None
         DelayItemLoading: =true
         Height: =116
-        Items: =Filter(BD_Ind_train_Bib,Curso = "Operador de Moagem Básico")
+        Items: =Filter(BD_TRNMT,Curso = "Operador de Moagem Básico")
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0

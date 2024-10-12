@@ -4,22 +4,10 @@
     Image12_9 As image:
         BorderStyle: =BorderStyle.None
         Height: =Parent.Height
-        Image: ='BGNV (1)'
+        Image: =bgg
         ImagePosition: =ImagePosition.Fill
         Width: =Parent.Width
         ZIndex: =1
-
-    Image31_2 As image:
-        BorderStyle: =BorderStyle.None
-        FlipHorizontal: |
-            =true
-        Height: |
-            =500
-        Image: ='Camada 1 (17)'
-        ImagePosition: =ImagePosition.Stretch
-        Width: =Parent.Width
-        Y: =Parent.Height - Image31_2.Height
-        ZIndex: =2
 
     Inicial_3 As groupContainer.manualLayoutContainer:
         BorderStyle: =BorderStyle.None
@@ -194,7 +182,7 @@
                                 BorderStyle: =BorderStyle.None
                                 Height: =Parent.Height
                                 HoverBorderColor: =RGBA(95, 211, 250, 1)
-                                Image: ='BT (2) (1)'
+                                Image: =OBJBEGE
                                 ImagePosition: =ImagePosition.Fill
                                 Width: =Parent.Width
                                 ZIndex: =1
@@ -280,7 +268,7 @@
                                 HoverBorderColor: =RGBA(40, 134, 222, 1)
                                 HoverColor: =RGBA(76, 211, 252, 1)
                                 HoverFill: =RGBA(0, 0, 0, 0)
-                                OnSelect: =Navigate(Login,ScreenTransition.Fade)
+                                OnSelect: =Navigate(Dash_Collab,ScreenTransition.Fade)
                                 PaddingBottom: =0
                                 PaddingLeft: =25
                                 PaddingRight: =0
@@ -345,7 +333,7 @@
                                 BorderThickness: =4
                                 Color: =RGBA(12, 59, 94, 1)
                                 DisabledFill: =RGBA(0, 0, 0, 0)
-                                DisplayMode: =If( LookUp(BD_Industrial_training_Login,Email = User().Email,Tipo_acesso) = "Gestor" ,  DisplayMode.Edit , DisplayMode.Disabled )
+                                DisplayMode: =If( LookUp(BD_LOG,Email = User().Email,Tipo_acesso) = "Gestor" ,  DisplayMode.Edit , DisplayMode.Disabled )
                                 Fill: =RGBA(0, 0, 0, 0)
                                 Font: =Font.'Segoe UI'
                                 Height: =Parent.Height
@@ -370,7 +358,7 @@
                                 ZIndex: =2
 
                             Label28 As label:
-                                Text: =LookUp(BD_Industrial_training_Login,Email = User().Email,Tipo_acesso)
+                                Text: =LookUp(BD_LOG ,Email = User().Email,Tipo_acesso)
                                 Visible: =false
                                 X: =100
                                 ZIndex: =3
@@ -378,10 +366,11 @@
             Container32_2 As groupContainer.horizontalAutoLayoutContainer:
                 BorderStyle: =BorderStyle.None
                 DropShadow: =DropShadow.None
+                FillPortions: =0
                 Height: =80
-                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutAlignItems: =LayoutAlignItems.End
                 LayoutJustifyContent: =LayoutJustifyContent.End
-                LayoutMinHeight: =100
+                LayoutMinHeight: =40
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =0
@@ -394,8 +383,10 @@
                 Image6_2 As image:
                     BorderStyle: =BorderStyle.None
                     Height: =80
-                    Image: =PPP2
+                    Image: =LOGO
+                    LayoutMinHeight: =40
                     PaddingBottom: =30
+                    PaddingLeft: =250
                     PaddingTop: =30
                     Tooltip: ="By pedro.s.araujo"
                     Width: =500

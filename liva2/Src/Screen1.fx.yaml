@@ -1,7 +1,7 @@
 Screen1 As screen:
 
     Form2 As form:
-        DataSource: =BD_Ind_train_Bib
+        DataSource: =BD_TRNMT
         DefaultMode: =FormMode.New
         Fill: =RGBA(255, 255, 255, 1)
         Height: =728
@@ -16,10 +16,10 @@ Screen1 As screen:
             DataField: ="Title"
             Default: =LookUp(Gallery1.AllItems, TextInput3_12.Text = Text(var_count_list), TextInput3_12.Text)
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Título)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Título)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Título)
+            MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Título)
             Required: =false
             Update: =DataCardValue49.Text
             Width: =168
@@ -92,10 +92,10 @@ Screen1 As screen:
             DataField: ="Curso"
             Default: =ThisItem.Curso
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Curso)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Curso)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Curso)
+            MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Curso)
             Required: =false
             Update: =DataCardValue50.Text
             Width: =168
@@ -168,10 +168,10 @@ Screen1 As screen:
             DataField: ="Trilha"
             Default: =ThisItem.Trilha
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Trilha)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Trilha)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Trilha)
+            MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Trilha)
             Required: =false
             Update: =DataCardValue51.Text
             Width: =168
@@ -244,10 +244,10 @@ Screen1 As screen:
             DataField: ="Dura_x00e7__x00e3_o"
             Default: =ThisItem.Duração
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Duração)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Duração)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Duração)
+            MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Duração)
             Required: =false
             Update: =DataCardValue52.Text
             Width: =168
@@ -320,7 +320,7 @@ Screen1 As screen:
             DataField: ="Capa"
             Default: =ThisItem.Capa
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Capa)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Capa)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -396,10 +396,10 @@ Screen1 As screen:
             DataField: ="Caminho"
             Default: =ThisItem.Caminho
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Caminho)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Caminho)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Caminho)
+            MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Caminho)
             Required: =false
             Update: =DataCardValue53.Text
             Width: =168
@@ -472,7 +472,7 @@ Screen1 As screen:
             DataField: ="Capa_trilha"
             Default: =ThisItem.Capa_trilha
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Capa_trilha)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Capa_trilha)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -548,10 +548,10 @@ Screen1 As screen:
             DataField: ="Txtimg"
             Default: =ThisItem.ID_Lession
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,ID_Lession)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,ID_Lession)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, ID_Lession)
+            MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, ID_Lession)
             Required: =false
             Update: =DataCardValue54.Text
             Width: =168
@@ -624,10 +624,10 @@ Screen1 As screen:
             DataField: ="ID_training"
             Default: =ThisItem.ID_training
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,ID_training)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,ID_training)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, ID_training)
+            MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, ID_training)
             Required: =false
             Update: =DataCardValue55.Text
             Width: =168
@@ -700,10 +700,10 @@ Screen1 As screen:
             DataField: ="Sinopse"
             Default: =ThisItem.Sinopse
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Sinopse)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Sinopse)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Sinopse)
+            MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Sinopse)
             Required: =false
             Update: =DataCardValue56.Text
             Width: =168
@@ -776,10 +776,10 @@ Screen1 As screen:
             DataField: ="Video_Column"
             Default: =ThisItem.Video_Column
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Video_Column)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Video_Column)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Video_Column)
+            MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, Video_Column)
             Required: =false
             Update: =DataCardValue57.Text
             Width: =168
@@ -852,10 +852,10 @@ Screen1 As screen:
             DataField: ="Tem_prova_x003f_"
             Default: =ThisItem.'Tem_prova?'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,'Tem_prova?')
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,'Tem_prova?')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, 'Tem_prova?')
+            MaxLength: =DataSourceInfo([@BD_TRNMT], DataSourceInfo.MaxLength, 'Tem_prova?')
             Required: =false
             Update: =DataCardValue58.Text
             Width: =168
@@ -928,7 +928,7 @@ Screen1 As screen:
             DataField: ="{Attachments}"
             Default: =ThisItem.Anexos
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Anexos)
+            DisplayName: =DataSourceInfo([@BD_TRNMT],DataSourceInfo.DisplayName,Anexos)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -1178,7 +1178,7 @@ Screen1 As screen:
                                 FontWeight: =FontWeight.Lighter
                                 HoverColor: =RGBA(9, 33, 98, 1)
                                 HoverFill: =RGBA(0, 217, 255, 1)
-                                OnSelect: =ClearCollect(COL_Trilhas , Defaults(BD_Ind_train_Bib))
+                                OnSelect: =ClearCollect(COL_Trilhas , Defaults(BD_TRNMT))
                                 RadiusBottomLeft: =4
                                 RadiusBottomRight: =4
                                 RadiusTopLeft: =4

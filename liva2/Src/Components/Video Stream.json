@@ -87,7 +87,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Video Stream",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1378,
+        "PublishOrderIndex": 1377,
         "Rules": [
           {
             "Category": "Data",
@@ -411,7 +411,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container58",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1380,
+            "PublishOrderIndex": 1379,
             "Rules": [
               {
                 "Category": "Data",
@@ -788,7 +788,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container58",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1381,
+            "PublishOrderIndex": 1380,
             "Rules": [
               {
                 "Category": "Design",
@@ -1070,7 +1070,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Video Stream",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1379,
+        "PublishOrderIndex": 1378,
         "Rules": [
           {
             "Category": "Design",
@@ -1338,7 +1338,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Container41",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1384,
+                "PublishOrderIndex": 1383,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1631,7 +1631,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container57",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1383,
+            "PublishOrderIndex": 1382,
             "Rules": [
               {
                 "Category": "Design",
@@ -1838,7 +1838,7 @@
                     "OptimizeForDevices": "Off",
                     "Parent": "Gallery9",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 1387,
+                    "PublishOrderIndex": 1386,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -1997,7 +1997,7 @@
                     "OptimizeForDevices": "Off",
                     "Parent": "Gallery9",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 1388,
+                    "PublishOrderIndex": 1387,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2375,7 +2375,7 @@
                     "OptimizeForDevices": "Off",
                     "Parent": "Gallery9",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 1389,
+                    "PublishOrderIndex": 1388,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2776,7 +2776,7 @@
                     "OptimizeForDevices": "Off",
                     "Parent": "Gallery9",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 1390,
+                    "PublishOrderIndex": 1389,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3133,7 +3133,7 @@
                 "OptimizeForDevices": "Off",
                 "Parent": "Container55",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 1386,
+                "PublishOrderIndex": 1385,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3481,7 +3481,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "Container57",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 1385,
+            "PublishOrderIndex": 1384,
             "Rules": [
               {
                 "Category": "Design",
@@ -3759,7 +3759,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Video Stream",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1382,
+        "PublishOrderIndex": 1381,
         "Rules": [
           {
             "Category": "Design",

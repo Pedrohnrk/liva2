@@ -2,7 +2,7 @@
     BackgroundImage: ='999 (1)'
     Fill: =RGBA(0, 0, 0, 0)
     ImagePosition: =ImagePosition.Stretch
-    OnVisible: =Refresh(BD_linked_training);Refresh(BD_Ind_train_Bib)
+    OnVisible: =Refresh(BD_linked_training);Refresh(BD_TRNMT)
 
     Image5 As image:
         Height: =Parent.Height
@@ -660,7 +660,7 @@
                                 BorderColor: =RGBA(15, 84, 140, 1)
                                 BorderThickness: =1
                                 Height: =Parent.TemplateHeight / 1.4
-                                Image: =LookUp(BD_Ind_train_Bib,Curso=Title6.Text,Capa)
+                                Image: =LookUp(BD_TRNMT,Curso=Title6.Text,Capa)
                                 ImagePosition: =ImagePosition.Fill
                                 OnSelect: =Select(Parent)
                                 RadiusBottomLeft: =4
@@ -704,7 +704,7 @@
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =9
-                                Text: =LookUp(BD_Ind_train_Bib,Curso=Title6.Text,Sinopse)
+                                Text: =LookUp(BD_TRNMT,Curso=Title6.Text,Sinopse)
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =602
                                 X: |
@@ -802,7 +802,7 @@
                                 DelayItemLoading: =true
                                 Fill: =RGBA(255, 255, 255, 1)
                                 Height: =81
-                                Items: =Filter(BD_Ind_train_Bib,Curso=ThisItem.Nome_Treinamento)
+                                Items: =Filter(BD_TRNMT,Curso=ThisItem.Nome_Treinamento)
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
@@ -1046,7 +1046,7 @@
                             BorderThickness: =5
                             DelayItemLoading: =true
                             Height: =Parent.Height - Label4.Height - 20
-                            Items: =Filter(BD_Ind_train_Bib,Curso = Var_trilha)
+                            Items: =Filter(BD_TRNMT,Curso = Var_trilha)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             OnSelect: =Navigate(Mov)
