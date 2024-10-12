@@ -1,0 +1,403 @@
+"'Inicio-NV' As screen":
+    OnVisible: =Refresh(BD_Industrial_training_Login);Set(varVideo,true)
+
+    Image12_9 As image:
+        BorderStyle: =BorderStyle.None
+        Height: =Parent.Height
+        Image: ='BGNV (1)'
+        ImagePosition: =ImagePosition.Fill
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Image31_2 As image:
+        BorderStyle: =BorderStyle.None
+        FlipHorizontal: |
+            =true
+        Height: |
+            =500
+        Image: ='Camada 1 (17)'
+        ImagePosition: =ImagePosition.Stretch
+        Width: =Parent.Width
+        Y: =Parent.Height - Image31_2.Height
+        ZIndex: =2
+
+    Inicial_3 As groupContainer.manualLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =Parent.Width
+        ZIndex: =8
+
+        Container34_2 As groupContainer.verticalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width
+            ZIndex: =9
+
+            Container35_2 As groupContainer.manualLayoutContainer:
+                BorderColor: =RGBA(255, 255, 0, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height/2.5
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =1
+
+                Label14_12 As label:
+                    AutoHeight: =true
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =30
+                    LineHeight: =0.7
+                    PaddingLeft: =50
+                    Text: |-
+                        ="Selecione uma opção abaixo para começar:"
+                    VerticalAlign: =VerticalAlign.Bottom
+                    Width: =Container30_2.Width
+                    X: =
+                    Y: =Container35_2.Height - Label14_12.Height
+                    ZIndex: =5
+
+                Group13_1 As group:
+                    Height: =5
+                    Width: =5
+                    X: =40
+                    Y: =40
+                    ZIndex: =5
+
+                    Label14_10 As label:
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(255, 255, 255, 1)
+                        Font: ="Monteserrat"
+                        FontWeight: =FontWeight.Lighter
+                        Height: =45
+                        LineHeight: =0.5
+                        PaddingLeft: =0
+                        Size: =34
+                        Text: ="Central de capacitação"
+                        Tooltip: ="By pedro.s.araujo"
+                        Width: =612
+                        X: =54
+                        Y: =99
+                        ZIndex: =2
+
+                    Label14_11 As label:
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(255, 255, 255, 1)
+                        Font: ="Monteserrat"
+                        FontWeight: =FontWeight.Bold
+                        Height: =80
+                        LineHeight: =0.5
+                        PaddingLeft: =0
+                        Size: =56
+                        Text: ="Livá"
+                        Tooltip: ="By pedro.s.araujo"
+                        Width: =612
+                        X: =54
+                        Y: =145
+                        ZIndex: =4
+
+            Container30_2 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(255, 255, 0, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =3
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height /2
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =16
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =Parent.Width
+                ZIndex: =2
+
+                Container29_2 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(62, 128, 149, 1)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =8
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =32
+                    PaddingLeft: =16
+                    PaddingRight: =8
+                    PaddingTop: =32
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =Parent.Width/4
+                    ZIndex: =2
+
+                    Container33_5 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(240, 98, 15, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =4
+                        DropShadow: =DropShadow.None
+                        Height: =150
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        PaddingBottom: =16
+                        PaddingLeft: =16
+                        PaddingRight: =16
+                        PaddingTop: =16
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =300
+                        ZIndex: =2
+
+                        Container23_6 As groupContainer.manualLayoutContainer:
+                            BorderColor: =RGBA(180, 214, 250, 0.37)
+                            BorderThickness: =4
+                            DropShadow: =DropShadow.Regular
+                            Height: =Parent.Height /1.5
+                            Width: =Parent.Width /1.2
+                            X: =(Parent.Width - Container23_6.Width)/2
+                            Y: =(Parent.Height - Container23_6.Height)/2
+                            ZIndex: =3
+
+                            Image16_9 As image:
+                                BorderColor: =RGBA(95, 211, 250, 0.3)
+                                BorderStyle: =BorderStyle.None
+                                Height: =Parent.Height
+                                HoverBorderColor: =RGBA(95, 211, 250, 1)
+                                Image: ='BT (2) (1)'
+                                ImagePosition: =ImagePosition.Fill
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                            Button13_9 As button:
+                                Align: =Align.Left
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                BorderThickness: =4
+                                Color: =RGBA(180, 214, 250, 1)
+                                DisabledFill: =RGBA(0, 0, 0, 1)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Font: =Font.'Segoe UI'
+                                Height: =Parent.Height
+                                HoverBorderColor: =RGBA(40, 134, 222, 1)
+                                HoverColor: =RGBA(76, 211, 252, 1)
+                                HoverFill: =RGBA(6, 36, 56, 0.9)
+                                OnSelect: =Navigate(Streaming,ScreenTransition.Fade)
+                                PaddingBottom: =0
+                                PaddingLeft: =25
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                PressedBorderColor: =RGBA(240, 98, 15, 1)
+                                PressedFill: =RGBA(0, 0, 0, 0)
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Size: =12
+                                Text: ="Visitantes"
+                                Width: =Parent.Width
+                                ZIndex: =2
+
+                    Container33_6 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(240, 98, 15, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =4
+                        DropShadow: =DropShadow.None
+                        Height: =150
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        PaddingBottom: =16
+                        PaddingLeft: =16
+                        PaddingRight: =16
+                        PaddingTop: =16
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =300
+                        ZIndex: =3
+
+                        Container23_7 As groupContainer.manualLayoutContainer:
+                            BorderColor: =RGBA(180, 214, 250, 0.37)
+                            BorderThickness: =4
+                            DropShadow: =DropShadow.Regular
+                            Height: =Parent.Height /1.5
+                            Width: =Parent.Width /1.2
+                            X: =(Parent.Width - Container23_7.Width)/2
+                            Y: =(Parent.Height - Container23_7.Height)/2
+                            ZIndex: =3
+
+                            Image16_10 As image:
+                                BorderColor: =RGBA(95, 211, 250, 0.3)
+                                BorderStyle: =BorderStyle.None
+                                Height: =Parent.Height
+                                HoverBorderColor: =RGBA(95, 211, 250, 1)
+                                Image: ='BT (3)'
+                                ImagePosition: =ImagePosition.Fill
+                                Width: |
+                                    =Parent.Width
+                                ZIndex: =1
+
+                            Button13_10 As button:
+                                Align: =Align.Left
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                BorderThickness: =4
+                                Color: =RGBA(12, 59, 94, 1)
+                                DisabledFill: =RGBA(0, 0, 0, 1)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Font: =Font.'Segoe UI'
+                                Height: =Parent.Height
+                                HoverBorderColor: =RGBA(40, 134, 222, 1)
+                                HoverColor: =RGBA(76, 211, 252, 1)
+                                HoverFill: =RGBA(0, 0, 0, 0)
+                                OnSelect: =Navigate(Login,ScreenTransition.Fade)
+                                PaddingBottom: =0
+                                PaddingLeft: =25
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                PressedBorderColor: =RGBA(240, 98, 15, 1)
+                                PressedColor: =RGBA(40, 134, 222, 1)
+                                PressedFill: =RGBA(0, 0, 0, 0)
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Size: =12
+                                Text: ="Colaborador"
+                                Width: =Parent.Width
+                                ZIndex: =2
+
+                    Container33_7 As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(240, 98, 15, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =4
+                        DropShadow: =DropShadow.None
+                        Height: =150
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        PaddingBottom: =16
+                        PaddingLeft: =16
+                        PaddingRight: =16
+                        PaddingTop: =16
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Visible: =If(Label28.Text = "Gestor",true,false)
+                        Width: =300
+                        ZIndex: =4
+
+                        Container23_8 As groupContainer.manualLayoutContainer:
+                            BorderColor: =RGBA(180, 214, 250, 0.37)
+                            BorderThickness: =4
+                            DropShadow: =DropShadow.Regular
+                            Height: =Parent.Height /1.5
+                            Width: =Parent.Width /1.2
+                            X: =(Parent.Width - Container23_8.Width)/2
+                            Y: =(Parent.Height - Container23_8.Height)/2
+                            ZIndex: =3
+
+                            Image16_11 As image:
+                                BorderColor: =RGBA(95, 211, 250, 0.3)
+                                BorderStyle: =BorderStyle.None
+                                Height: =Parent.Height
+                                HoverBorderColor: =RGBA(95, 211, 250, 1)
+                                Image: ='BT (4)'
+                                ImagePosition: =ImagePosition.Fill
+                                Width: |
+                                    =Parent.Width
+                                ZIndex: =1
+
+                            Button13_11 As button:
+                                Align: =Align.Left
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                BorderThickness: =4
+                                Color: =RGBA(12, 59, 94, 1)
+                                DisabledFill: =RGBA(0, 0, 0, 0)
+                                DisplayMode: =If( LookUp(BD_Industrial_training_Login,Email = User().Email,Tipo_acesso) = "Gestor" ,  DisplayMode.Edit , DisplayMode.Disabled )
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Font: =Font.'Segoe UI'
+                                Height: =Parent.Height
+                                HoverBorderColor: =RGBA(40, 134, 222, 1)
+                                HoverColor: =RGBA(76, 211, 252, 1)
+                                HoverFill: =RGBA(0, 0, 0, 0)
+                                OnSelect: =Set(varNovo_Trein,false);Set(varVinculo,false);Set(varCadprova01,false);Set(CadastroColaborador,false);Set(vartime,false);Set(varEditarColab,false);Navigate(Management,ScreenTransition.Fade)
+                                PaddingBottom: =0
+                                PaddingLeft: =25
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                PressedBorderColor: =RGBA(240, 98, 15, 1)
+                                PressedColor: =RGBA(40, 134, 222, 1)
+                                PressedFill: =RGBA(0, 0, 0, 0)
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Size: =12
+                                Text: ="Gestor"
+                                Width: =Parent.Width
+                                ZIndex: =2
+
+                            Label28 As label:
+                                Text: =LookUp(BD_Industrial_training_Login,Email = User().Email,Tipo_acesso)
+                                Visible: =false
+                                X: =100
+                                ZIndex: =3
+
+            Container32_2 As groupContainer.horizontalAutoLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                Height: =80
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutJustifyContent: =LayoutJustifyContent.End
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =Parent.Width
+                ZIndex: =3
+
+                Image6_2 As image:
+                    BorderStyle: =BorderStyle.None
+                    Height: =80
+                    Image: =PPP2
+                    PaddingBottom: =30
+                    PaddingTop: =30
+                    Tooltip: ="By pedro.s.araujo"
+                    Width: =500
+                    ZIndex: =1
+

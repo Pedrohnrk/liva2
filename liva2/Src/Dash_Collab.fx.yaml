@@ -1,0 +1,1289 @@
+"Dash_Collab As screen.'autoLayout_Sidebar_ver1.0'":
+    BackgroundImage: ='999 (1)'
+    Fill: =RGBA(0, 0, 0, 0)
+    ImagePosition: =ImagePosition.Stretch
+    OnVisible: =Refresh(BD_linked_training);Refresh(BD_Ind_train_Bib)
+
+    Image5 As image:
+        Height: =Parent.Height
+        Image: ='BGStream (3) (1)'
+        ImagePosition: =ImagePosition.Fill
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Image5_1 As image:
+        Height: =Parent.Height
+        Image: ='Camada 5 (4)'
+        ImagePosition: =ImagePosition.Fill
+        Width: =Parent.Width
+        ZIndex: =2
+
+    ScreenContainer6 As groupContainer.verticalAutoLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =4
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =16
+        PaddingRight: =16
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =Parent.Width
+        ZIndex: =3
+
+        Container56 As groupContainer.horizontalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =30
+            LayoutAlignItems: =LayoutAlignItems.End
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =1
+
+            Label14_5 As label:
+                Align: =Align.Center
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(255, 255, 255, 1)
+                Font: ="Monteserrat"
+                FontWeight: =FontWeight.Lighter
+                Height: =30
+                LineHeight: =0.5
+                PaddingBottom: =0
+                PaddingLeft: =4
+                PaddingRight: =4
+                PaddingTop: =8
+                Size: =12
+                Text: ="Escola técnica "
+                Width: =111
+                X: =29
+                ZIndex: =1
+
+            Label14_6 As label:
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(255, 255, 255, 1)
+                Font: ="Monteserrat"
+                FontWeight: =FontWeight.Bold
+                Height: =30
+                LineHeight: =0.5
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingTop: =8
+                Size: =12
+                Text: ="de Moagem"
+                Width: =111
+                X: =140
+                ZIndex: =2
+
+            Image36 As image:
+                Height: =30
+                Image: ='Path 0 (1)'
+                PaddingTop: =8
+                Width: =29
+                ZIndex: =3
+
+        HeaderContainer5 As groupContainer.horizontalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =100
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =24
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =50
+            LayoutMinWidth: =Parent.Width - 100
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =8
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =8
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =3
+
+            Icon10_3 As icon.ArrowLeft:
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(95, 211, 250, 1)
+                Height: =50
+                HoverColor: =RGBA(255, 191, 0, 1)
+                Icon: =Icon.ArrowLeft
+                LayoutMinHeight: =50
+                LayoutMinWidth: =50
+                OnSelect: =Navigate('Inicio-NV',ScreenTransition.Fade)
+                PaddingLeft: =8
+                PaddingRight: =8
+                Width: =40
+                X: =9
+                Y: =10
+                ZIndex: =1
+
+            Container10_3 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(95, 211, 250, 0.45)
+                BorderThickness: =1
+                DropShadow: =DropShadow.Regular
+                Fill: =RGBA(4, 60, 90, 0.4)
+                Height: =Parent.Height /1.3
+                LayoutMinHeight: =100
+                LayoutMinWidth: =350
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =470
+                X: =
+                Y: =5
+                ZIndex: =2
+
+                Image9_6 As image:
+                    BorderColor: =RGBA(60, 100, 125, 1)
+                    BorderThickness: =3
+                    DisabledBorderColor: =RGBA(232, 144, 226, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Height: =60
+                    Image: =LookUp(BD_Industrial_training_Login,Matricula_var = varMatricula,Colaborador.Picture)
+                    RadiusBottomLeft: =100
+                    RadiusBottomRight: =100
+                    RadiusTopLeft: =100
+                    RadiusTopRight: =100
+                    Visible: =false
+                    Width: =60
+                    X: =12
+                    Y: =10
+                    ZIndex: =4
+
+                Label5_11 As label:
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(95, 211, 250, 0.69)
+                    DisabledColor: =RGBA(95, 211, 250, 0.3)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: ="Montserrat"
+                    Height: =34
+                    Size: =10
+                    Text: =LookUp(BD_Industrial_training_Login,Matricula_var = varMatricula,Título)
+                    VerticalAlign: =VerticalAlign.Top
+                    Visible: =false
+                    Width: =90
+                    X: =75
+                    Y: =30
+                    ZIndex: =5
+
+                Group7_2 As group:
+                    Height: =5
+                    Width: =5
+                    X: =40
+                    Y: =40
+                    ZIndex: =5
+
+                    Label5_9 As label:
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(95, 211, 250, 1)
+                        DisabledColor: =RGBA(25, 228, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        Height: =27
+                        Size: =12
+                        Text: =Proper(LookUp(BD_Industrial_training_Login,Matricula_var = varMatricula,Colaborador.DisplayName))
+                        Width: |+
+                            =Container10_3.Width - 80
+                            
+                        X: =75
+                        Y: =24
+                        ZIndex: =2
+
+                    Label5_8 As label:
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(60, 100, 125, 1)
+                        DisabledColor: =RGBA(242, 126, 234, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =30
+                        Size: =12
+                        Text: ="Bem vindo de volta"
+                        Width: |
+                            =Container10_3.Width - 100
+                        X: =75
+                        ZIndex: =3
+
+                Label5_10 As label:
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(95, 211, 250, 0.69)
+                    DisabledColor: =RGBA(95, 211, 250, 0.3)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: ="Montserrat"
+                    Height: =34
+                    Size: =12
+                    Text: =LookUp(BD_Industrial_training_Login,Título = varMatricula ,Email)
+                    VerticalAlign: =VerticalAlign.Top
+                    Visible: =false
+                    Width: =236
+                    X: =164
+                    ZIndex: =6
+
+                Avatar2_1 As Avatar:
+                    Appearance: ='Avatar.Appearance'.Colorful
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =64
+                    Image: =LookUp(BD_Industrial_training_Login,Matricula_var = varMatricula,Colaborador.Picture)
+                    Name: =User().FullName
+                    Shape: ='Avatar.Shape'.Square
+                    Width: =64
+                    X: =8
+                    Y: =6
+                    ZIndex: =7
+
+                Label5_5 As label:
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(95, 211, 250, 0.69)
+                    DisabledColor: =RGBA(95, 211, 250, 0.3)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: ="Montserrat"
+                    Height: =34
+                    Size: =10
+                    Text: =LookUp(BD_Industrial_training_Login,Título = varMatricula,Matricula_var)
+                    VerticalAlign: =VerticalAlign.Top
+                    Visible: =false
+                    Width: =90
+                    X: =260
+                    ZIndex: =8
+
+            Container10_9 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =1
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =Parent.Height /1.3
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =180
+                X: =555
+                Y: =5
+                ZIndex: =3
+
+                Title6_13 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: |
+                        =Parent.Height
+                    OnSelect: =
+                    PaddingBottom: =16
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =32
+                    Text: =CountRows(Gallery3.AllItems)
+                    VerticalAlign: =VerticalAlign.Bottom
+                    Visible: =false
+                    Width: =Parent.Width/2
+                    X: =Parent.Width - Title6_13.Width
+                    ZIndex: =7
+
+                Title6_14 As label:
+                    Align: =Align.Right
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(25, 228, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =Parent.Height
+                    OnSelect: =
+                    PaddingBottom: =16
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Text: ="Cursos cadastrados"
+                    VerticalAlign: =VerticalAlign.Bottom
+                    Visible: =false
+                    Width: =Parent.Width/2
+                    ZIndex: =8
+
+            Container10_7 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(95, 211, 250, 0.45)
+                BorderThickness: =1
+                DropShadow: =DropShadow.Regular
+                Fill: =RGBA(4, 60, 90, 0.4)
+                FillPortions: =0
+                Height: =Parent.Height /1.3
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =212
+                X: =555
+                Y: =5
+                ZIndex: =4
+
+                Title6_9 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: |
+                        =Parent.Height
+                    OnSelect: =
+                    PaddingBottom: =8
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =32
+                    Text: =CountRows(Gallery3.AllItems)
+                    VerticalAlign: =VerticalAlign.Bottom
+                    Width: =Parent.Width/2
+                    X: =Parent.Width - Title6_9.Width
+                    ZIndex: =7
+
+                Title6_10 As label:
+                    Align: =Align.Right
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(25, 228, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =Parent.Height
+                    OnSelect: =
+                    PaddingBottom: =16
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Text: ="Cursos cadastrados"
+                    VerticalAlign: =VerticalAlign.Bottom
+                    Width: =Parent.Width/2
+                    ZIndex: =8
+
+            Container10_8 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(95, 211, 250, 0.45)
+                BorderThickness: =1
+                DropShadow: =DropShadow.Regular
+                Fill: =RGBA(4, 60, 90, 0.4)
+                FillPortions: =0
+                Height: =Parent.Height /1.3
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =212
+                X: =802
+                Y: =5
+                ZIndex: =5
+
+                Title6_12 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =Parent.Height
+                    OnSelect: =
+                    PaddingBottom: =8
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =32
+                    Text: =CountIf(Gallery3.AllItems,Value(Label23_1.Text) = 100)
+                    VerticalAlign: =VerticalAlign.Bottom
+                    Width: =Parent.Width/2
+                    X: =Parent.Width - Title6_12.Width
+                    ZIndex: =7
+
+                Title6_11 As label:
+                    Align: =Align.Right
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(25, 228, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =Parent.Height
+                    OnSelect: =
+                    PaddingBottom: =16
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Text: ="Cursos concluidos"
+                    VerticalAlign: =VerticalAlign.Bottom
+                    Width: =Parent.Width/2
+                    ZIndex: =8
+
+            Container10_10 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(95, 211, 250, 0.45)
+                BorderThickness: =1
+                DropShadow: =DropShadow.Regular
+                Fill: =RGBA(4, 60, 90, 0.4)
+                FillPortions: =0
+                Height: =Parent.Height /1.3
+                LayoutMinHeight: =90
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =250
+                X: =1049
+                Y: =5
+                ZIndex: =6
+
+                Title6_16 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: = Parent .Height
+                    OnSelect: =
+                    PaddingBottom: =8
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =32
+                    Text: =IfError(Text(Value(Sum(Gallery3.AllItems,Value(Label23_1.Text)))/Value(CountRows(Gallery3.AllItems)))& " %","0%")
+                    VerticalAlign: =VerticalAlign.Bottom
+                    Width: =Parent.Width/2
+                    X: =Parent.Width - Title6_16.Width
+                    ZIndex: =7
+
+                Title6_15 As label:
+                    Align: =Align.Right
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(25, 228, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =Parent.Height
+                    OnSelect: =
+                    PaddingBottom: =16
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =10
+                    Text: ="Progresso"
+                    VerticalAlign: =VerticalAlign.Bottom
+                    Width: =Parent.Width/2
+                    ZIndex: =8
+
+        Container43 As groupContainer.manualLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.None
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            ZIndex: =4
+
+            Container31 As groupContainer.horizontalAutoLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                Height: |
+                    =Parent.Height - 40
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutGap: =8
+                LayoutMode: =LayoutMode.Auto
+                PaddingTop: =8
+                Width: =Parent.Width
+                ZIndex: =3
+
+                SidebarContainer4 As groupContainer.verticalAutoLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    DropShadow: =DropShadow.None
+                    FillPortions: =8
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =2
+
+                    Container15 As groupContainer.manualLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        ZIndex: =1
+
+                        "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                            DelayItemLoading: =true
+                            Fill: =RGBA(180, 214, 250, 1)
+                            Height: =464
+                            Items: =Filter(BD_linked_training,Matricula = Label5_5.Text)
+                            Layout: =Layout.Vertical
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplatePadding: =0
+                            TemplateSize: =104
+                            Visible: =false
+                            X: =5
+                            Y: =40
+                            ZIndex: =1
+
+                            Image14 As image:
+                                Height: =72
+                                OnSelect: =Select(Parent)
+                                RadiusBottomLeft: =8
+                                RadiusBottomRight: =8
+                                RadiusTopLeft: =8
+                                RadiusTopRight: =8
+                                Width: =72
+                                X: =16
+                                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                ZIndex: =1
+
+                            Title9 As label:
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(50, 49, 48, 1)
+                                FontWeight: =FontWeight.Bold
+                                Height: =Self.Size * 1.8
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =ThisItem.Nome_Treinamento
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Parent.TemplateWidth - 173
+                                X: =103
+                                Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle7.Size * 1.8)) / 2
+                                ZIndex: =2
+
+                            Subtitle7 As label:
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                Height: =Self.Size * 1.8
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =12
+                                Text: =ThisItem.ID_Emailaluno
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Title9.Width
+                                X: =Title9.X
+                                Y: =Title9.Y + Title9.Height
+                                ZIndex: =3
+
+                            NextArrow6 As icon.ChevronRight:
+                                AccessibleLabel: =Self.Tooltip
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(166, 166, 166, 1)
+                                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                                DisabledColor: =RGBA(119, 119, 119, 1)
+                                Height: =50
+                                Icon: =Icon.ChevronRight
+                                OnSelect: =Set(Var_trilha,Title6.Text)
+                                PaddingBottom: =16
+                                PaddingLeft: =16
+                                PaddingRight: =16
+                                PaddingTop: =16
+                                Tooltip: ="Exibir detalhes do item"
+                                Width: =50
+                                X: =Parent.TemplateWidth - Self.Width - 12
+                                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                                ZIndex: =4
+
+                            Separator6 As rectangle:
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =8
+                                OnSelect: =Select(Parent)
+                                Width: =Parent.TemplateWidth
+                                Y: =Parent.TemplateHeight - Self.Height
+                                ZIndex: =5
+
+                            Rectangle7 As rectangle:
+                                Fill: =RGBA(0, 18, 107, 1)
+                                Height: =Parent.TemplateHeight - Separator6.Height
+                                OnSelect: =Select(Parent)
+                                Visible: =ThisItem.IsSelected
+                                Width: =4
+                                ZIndex: =6
+
+                        "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                            BorderStyle: =BorderStyle.None
+                            DelayItemLoading: =true
+                            Height: =Parent.Height - Label4.Height - 20
+                            Items: =Filter(BD_linked_training, Matricula = varMatricula)
+                            Layout: =Layout.Vertical
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplatePadding: =0
+                            TemplateSize: =130
+                            Transition: =Transition.Push
+                            Width: =Parent.Width
+                            Y: =Label4.Height
+                            ZIndex: =2
+
+                            Button3 As button:
+                                BorderColor: =
+                                BorderThickness: =1
+                                DisabledBorderColor: =RGBA(15, 108, 189, 1)
+                                DisabledFill: =RGBA(4, 60, 90, 0.6)
+                                DisplayMode: =DisplayMode.Disabled
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =Parent.TemplateHeight / 1.2
+                                HoverFill: =
+                                OnSelect: =Select(Parent)
+                                RadiusBottomLeft: =8
+                                RadiusBottomRight: =8
+                                RadiusTopLeft: =8
+                                RadiusTopRight: =8
+                                Text: =""
+                                Width: =Parent.TemplateWidth - 30
+                                X: =(Parent.TemplateWidth - Button3_2.Width)/2 -8
+                                Y: =(Parent.TemplateHeight - Button3_2.Height)/2
+                                ZIndex: =2
+
+                            Image8 As image:
+                                BorderColor: =RGBA(15, 84, 140, 1)
+                                BorderThickness: =1
+                                Height: =Parent.TemplateHeight / 1.4
+                                Image: =LookUp(BD_Ind_train_Bib,Curso=Title6.Text,Capa)
+                                ImagePosition: =ImagePosition.Fill
+                                OnSelect: =Select(Parent)
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: |
+                                    =150
+                                X: =16
+                                Y: =(Parent.TemplateHeight - Image8.Height)/2
+                                ZIndex: =3
+
+                            Title6 As label:
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(255, 255, 255, 1)
+                                Font: =Font.Lato
+                                FontWeight: =FontWeight.Semibold
+                                Height: =25
+                                LineHeight: =1
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =12
+                                Text: =ThisItem.Nome_Treinamento
+                                Width: |
+                                    =Parent.Width - 400
+                                X: =Image8.Width + Image8.X + 16
+                                Y: =18
+                                ZIndex: =4
+
+                            Subtitle4 As label:
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Font: =Font.'Segoe UI'
+                                LineHeight: =1
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =9
+                                Text: =LookUp(BD_Ind_train_Bib,Curso=Title6.Text,Sinopse)
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =602
+                                X: |
+                                    =Image8.Width + Image8.X + 16
+                                Y: =46
+                                ZIndex: =5
+
+                            "Progress2 As 'Barra de Progresso'":
+                                BasePaletteColor: =RGBA(8, 222, 8, 1)
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =20
+                                Indeterminate: =false
+                                Max: =CountRows(Gallery8_1.AllItems)
+                                ProgressColor: ='Progress.ProgressColor'.Brand
+                                Shape: ='Progress.Shape'.Rounded
+                                Thickness: ='Progress.Thickness'.Large
+                                Value: =Label1.Text
+                                Visible: =false
+                                Width: =550
+                                X: =0
+                                Y: =79
+                                ZIndex: =6
+
+                            TextCanvas7 As Texto:
+                                BorderColor: =
+                                BorderStyle: =""
+                                DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
+                                Height: =32
+                                Text: =ThisItem.ID
+                                Visible: =false
+                                Width: =96
+                                X: =21
+                                Y: =98
+                                ZIndex: =7
+
+                            Label1 As label:
+                                OnSelect: =Select(Parent)
+                                Text: =CountRows(Gallery8.AllItems)
+                                Visible: =false
+                                X: =16
+                                Y: =58
+                                ZIndex: =8
+
+                            "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                                DelayItemLoading: =true
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =59
+                                Items: =Filter(BD_Ind_Ans_Exam,Matricula=varMatricula ,Assistiu="1",Curso=Title6.Text)
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplatePadding: =0
+                                TemplateSize: =30
+                                Visible: =false
+                                Width: =124
+                                X: =376
+                                Y: =20
+                                ZIndex: =9
+
+                                Title12 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: =
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Parent.TemplateWidth - 173
+                                    X: =103
+                                    Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle10.Size * 1.8)) / 2
+                                    ZIndex: =2
+
+                                Subtitle10 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =28
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =12
+                                    Text: =ThisItem.Assistiu
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =385
+                                    ZIndex: =3
+
+                            "Gallery8_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                                DelayItemLoading: =true
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =81
+                                Items: =Filter(BD_Ind_train_Bib,Curso=ThisItem.Nome_Treinamento)
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplatePadding: =0
+                                TemplateSize: =30
+                                Visible: =false
+                                Width: =301
+                                X: =199
+                                Y: =13
+                                ZIndex: =10
+
+                                Title12_1 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =14
+                                    Text: =
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Parent.TemplateWidth - 173
+                                    X: =103
+                                    Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle10.Size * 1.8)) / 2
+                                    ZIndex: =2
+
+                                Subtitle10_1 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =27
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =12
+                                    Text: =ThisItem.Curso
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =351
+                                    ZIndex: =3
+
+                            TextCanvas11 As Texto:
+                                BorderColor: =
+                                BorderStyle: =""
+                                DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
+                                Height: =32
+                                Text: =CountRows(Gallery8_1.AllItems)
+                                Visible: =false
+                                Width: =96
+                                X: =600
+                                Y: =58
+                                ZIndex: =11
+
+                            TextCanvas3_2 As Texto:
+                                BorderColor: =
+                                BorderStyle: =""
+                                DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
+                                Height: =32
+                                Text: =Progress2.Value
+                                Visible: =false
+                                Width: =96
+                                X: =575
+                                Y: =52
+                                ZIndex: =12
+
+                            TextCanvas3_3 As Texto:
+                                BorderColor: =
+                                BorderStyle: =""
+                                DisplayMode: =DisplayMode.Edit
+                                Fill: =
+                                FontColor: =
+                                Height: =32
+                                Text: =Progress2.Max
+                                Visible: =false
+                                Width: =96
+                                X: =600
+                                Y: =54
+                                ZIndex: =13
+
+                            Label23 As label:
+                                Align: =Align.Center
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(88, 217, 252, 1)
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =30
+                                OnSelect: =Select(Parent)
+                                PaddingLeft: =16
+                                Size: =12
+                                Text: =IfError(Progress2.Value / Progress2.Max *100 & " %","0%")
+                                Width: =80
+                                X: =Parent.TemplateWidth - Label23.Width - 20
+                                Y: =90
+                                ZIndex: =14
+
+                            Label23_1 As label:
+                                Align: =Align.Center
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(180, 214, 250, 1)
+                                Font: ="Montserrat"
+                                FontWeight: =FontWeight.Semibold
+                                Height: =44
+                                OnSelect: =Select(Parent)
+                                Size: =16
+                                Text: =IfError( Progress2.Value / Progress2.Max *100,"0%")
+                                Visible: =false
+                                Width: =86
+                                X: =614
+                                Y: =40
+                                ZIndex: =15
+
+                            Label39 As label:
+                                OnSelect: =Select(Parent)
+                                Text: =ThisItem.ID
+                                Visible: =false
+                                X: =550
+                                Y: =58
+                                ZIndex: =16
+
+                            Label40 As label:
+                                OnSelect: =Select(Parent)
+                                Text: =ThisItem.Nome_Treinamento
+                                Visible: =false
+                                X: =520
+                                Y: =54
+                                ZIndex: =17
+
+                            Slider2 As slider:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                Default: =Label1.Text
+                                DisabledBorderColor: =RGBA(52, 152, 47, 1)
+                                DisplayMode: =DisplayMode.View
+                                HandleSize: =8
+                                Height: =20
+                                HoverBorderColor: =RGBA(247, 116, 38, 1)
+                                Max: =CountRows(Gallery8_1.AllItems)
+                                OnSelect: =Select(Parent)
+                                RailFill: =RGBA(60, 100, 125, 1)
+                                RailThickness: =5
+                                ShowValue: =false
+                                ValueFill: =RGBA(155, 200, 60, 1)
+                                Width: =Parent.TemplateWidth /1.50
+                                X: =Image8.Width + Image8.X + 16
+                                Y: =95
+                                ZIndex: =18
+
+                            Button3_2 As button:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledBorderColor: =RGBA(40, 134, 222, 0)
+                                DisabledFill: =RGBA(0, 0, 0, 0)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                FocusedBorderThickness: =2
+                                Height: =Parent.TemplateHeight / 1.2
+                                HoverBorderColor: =RGBA(0, 217, 255, 1)
+                                HoverFill: =
+                                OnSelect: =Set(Var_trilha,Title6.Text)
+                                PressedFill: =
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Text: =""
+                                Width: =Parent.TemplateWidth - 30
+                                X: =(Parent.TemplateWidth - Button3_2.Width)/2 -8
+                                Y: =(Parent.TemplateHeight - Button3_2.Height)/2
+                                ZIndex: =19
+
+                        Label4 As label:
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(255, 255, 255, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            PaddingBottom: =4
+                            PaddingLeft: =0
+                            PaddingTop: =8
+                            Size: =14
+                            Text: ="Cursos cadastrados"
+                            Width: =Parent.Width - Image2_4.Width
+                            X: =Image2_4.Width
+                            ZIndex: =4
+
+                        Image2_4 As image:
+                            BorderStyle: =BorderStyle.None
+                            Height: =40
+                            Image: ='Path 0 (3)'
+                            PaddingBottom: =4
+                            PaddingLeft: =8
+                            PaddingRight: =8
+                            PaddingTop: =8
+                            Width: =60
+                            ZIndex: =7
+
+                Button4 As button:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =0
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledFill: =RGBA(71, 158, 245, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Fill: =RGBA(0, 176, 240, 1)
+                    Height: =Parent.Height /1.1
+                    Text: ="Botão"
+                    Width: =1
+                    ZIndex: =3
+
+                MainContainer6 As groupContainer.verticalAutoLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    DropShadow: =DropShadow.None
+                    FillPortions: =7
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    ZIndex: =4
+
+                    Container16 As groupContainer.manualLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        ZIndex: =2
+
+                        "Gallery2_3 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver5.0'":
+                            AccessibleLabel: ="Galeria de itens"
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =5
+                            DelayItemLoading: =true
+                            Height: =Parent.Height - Label4.Height - 20
+                            Items: =Filter(BD_Ind_train_Bib,Curso = Var_trilha)
+                            Layout: =Layout.Vertical
+                            LoadingSpinner: =LoadingSpinner.Data
+                            OnSelect: =Navigate(Mov)
+                            TabIndex: =0
+                            TemplatePadding: =0
+                            TemplateSize: =130
+                            Transition: =Transition.Push
+                            Width: =Parent.Width - 20
+                            X: =10
+                            Y: =Label4_2.Height
+                            ZIndex: =1
+
+                            Button3_1 As button:
+                                BorderColor: =RGBA(112, 181, 250, 1)
+                                BorderThickness: =1
+                                DisabledBorderColor: =RGBA(16, 110, 161, 1)
+                                DisabledFill: =RGBA(4, 60, 90, 0.34)
+                                DisplayMode: =DisplayMode.Disabled
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =Parent.TemplateHeight / 1.2
+                                OnSelect: =Select(Parent)
+                                RadiusBottomLeft: =8
+                                RadiusBottomRight: =8
+                                RadiusTopLeft: =8
+                                RadiusTopRight: =8
+                                Text: =""
+                                Width: =Parent.TemplateWidth - 30
+                                X: =(Parent.Width - Button3_3.Width)/2 - 8
+                                Y: =(Parent.TemplateHeight -  Button3_3.Height )/2
+                                ZIndex: =1
+
+                            Image13 As image:
+                                BorderColor: =RGBA(40, 134, 222, 0.32)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =1
+                                Height: =Parent.TemplateHeight / 1.5
+                                Image: =ThisItem.Capa_trilha
+                                ImagePosition: =ImagePosition.Stretch
+                                OnSelect: =Select(Parent)
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =160
+                                X: =20
+                                Y: =(Parent.TemplateHeight - Image13.Height)/2
+                                ZIndex: =2
+
+                            Title8 As label:
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(255, 255, 255, 1)
+                                FontWeight: =FontWeight.Bold
+                                Height: =17
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =ThisItem.Trilha
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =false
+                                Width: =225
+                                X: =255
+                                Y: =78
+                                ZIndex: =3
+
+                            Body1 As label:
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                Height: =15
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =12
+                                Text: =LookUp(BD_linked_training,MAP = Subtitle6.Text And Nome_Treinamento = Gallery3.Selected.Title6.Text, 1)
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =false
+                                Width: =344
+                                X: =136
+                                Y: =58
+                                ZIndex: =4
+
+                            Label6 As label:
+                                Align: =Align.Center
+                                Color: =RGBA(166, 247, 119, 1)
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =84
+                                OnSelect: =Select(Parent)
+                                Text: =If(Body1.Text = "1","Concluido")
+                                Width: =250
+                                X: =227
+                                Y: =23
+                                ZIndex: =5
+
+                            Label14 As label:
+                                Color: =RGBA(255, 191, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =9
+                                Size: =9
+                                Text: =Upper(ThisItem.Duração)
+                                VerticalAlign: =VerticalAlign.Bottom
+                                Width: =100
+                                X: =180
+                                Y: =87
+                                ZIndex: =6
+
+                            Label38 As label:
+                                OnSelect: =Select(Parent)
+                                Text: =ThisItem.ID
+                                Visible: =false
+                                X: =20
+                                ZIndex: =7
+
+                            Subtitle6 As label:
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(255, 255, 255, 1)
+                                Font: =Font.Lato
+                                FontWeight: =FontWeight.Semibold
+                                Height: =20
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =8
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =12
+                                Text: =ThisItem.Nome
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Parent.TemplateWidth - Image13.Width - 50
+                                X: =180
+                                Y: =23
+                                ZIndex: =8
+
+                            Label22 As label:
+                                Color: =RGBA(180, 214, 250, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =50
+                                LineHeight: =1
+                                OnSelect: =Select(Parent)
+                                PaddingLeft: =9
+                                PaddingTop: =0
+                                Size: =8
+                                Text: =ThisItem.Sinopse
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Parent.TemplateWidth - Image13.Width - 80
+                                X: =180
+                                Y: =45
+                                ZIndex: =9
+
+                            Label37 As label:
+                                Height: =0
+                                OnSelect: =Select(Parent)
+                                Text: =ThisItem.Caminho
+                                Visible: =false
+                                Width: =98
+                                X: =20
+                                Y: =18
+                                ZIndex: =10
+
+                            Button3_3 As button:
+                                BorderColor: =If(Label6.Text="Concluido",RGBA(166, 247, 119, 0.8),RGBA(0, 0, 0, 0))
+                                DisabledBorderColor: =If(Label6.Text="Concluido",RGBA(166, 247, 119, 1),RGBA(0, 0, 0, 0))
+                                DisabledFill: =RGBA(166, 215, 153, 0.08)
+                                DisplayMode: =If(Label6.Text="Concluido",DisplayMode.Disabled, DisplayMode.Edit)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                FocusedBorderThickness: |
+                                    =2
+                                Height: =Parent.TemplateHeight / 1.2
+                                HoverBorderColor: =RGBA(25, 228, 255, 1)
+                                HoverFill: =
+                                OnSelect: =Navigate(Mov);Set(selected_trail, ThisItem);Set(CAMINHOVIDEO,ThisItem.Caminho);Set(varplay,false)
+                                PressedFill: =
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Text: =""
+                                Width: =Parent.TemplateWidth - 30
+                                X: =(Parent.Width - Button3_3.Width)/2 - 8
+                                Y: =(Parent.TemplateHeight -  Button3_3.Height )/2
+                                ZIndex: =11
+
+                            NextArrow5 As icon.ChevronRight:
+                                AccessibleLabel: =Self.Tooltip
+                                Color: =RGBA(180, 214, 250, 1)
+                                Height: =105
+                                Icon: =Icon.ChevronRight
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =16
+                                PaddingLeft: =8
+                                PaddingRight: =16
+                                PaddingTop: =16
+                                Tooltip: ="Exibir detalhes do item"
+                                Visible: =If(Label6.Text = "Concluido",false,true)
+                                Width: =40
+                                X: =639
+                                Y: =13
+                                ZIndex: =12
+
+                        Label4_2 As label:
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(255, 255, 255, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            PaddingBottom: =4
+                            PaddingLeft: =0
+                            PaddingTop: =8
+                            Size: =14
+                            Text: ="Trilha"
+                            Width: =Parent.Width - Image2_5.Width
+                            X: =Image2_5.Width
+                            ZIndex: =2
+
+                        Image2_5 As image:
+                            BorderStyle: =BorderStyle.None
+                            Height: =40
+                            Image: ='Path 0 (3)'
+                            PaddingBottom: =4
+                            PaddingLeft: =8
+                            PaddingRight: =8
+                            PaddingTop: =8
+                            Width: =60
+                            ZIndex: =3
+
+            Image3 As image:
+                Height: =40
+                Image: =PPP2
+                PaddingBottom: =8
+                Width: =301
+                X: =(Parent.Width - Image3.Width)/2
+                Y: =Parent.Height - Image3.Height
+                ZIndex: =4
+

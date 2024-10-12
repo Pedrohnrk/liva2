@@ -1,0 +1,181 @@
+"'Video Stream' As CanvasComponent":
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Canvas1.Height
+    Width: =Canvas1.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Image32 As image:
+        BorderStyle: =BorderStyle.None
+        Height: =Parent.Height
+        Image: ='999 (1)'
+        ImagePosition: =ImagePosition.Fill
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Container57 As groupContainer.horizontalAutoLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        Height: =Parent.Height - Container58.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        Y: =Container58.Height
+        ZIndex: =7
+
+        Container41 As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(4, 60, 90, 1)
+            BorderThickness: =1
+            DropShadow: =DropShadow.Bold
+            Height: |
+                =Parent.Height -80
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =Parent.Width / 1.38
+            X: =40
+            Y: =40
+            ZIndex: =1
+
+            Video3 As videoPlayback:
+                AutoStart: =true
+                BorderStyle: =BorderStyle.None
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =Parent.Height
+                Image: =Gallery10.Selected.Imagem_Banner.Full
+                ImagePosition: =ImagePosition.Fit
+                Media: =varVideo3
+                Width: =Parent.Width
+                ZIndex: =1
+
+        Container55 As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            BorderColor: =RGBA(4, 60, 90, 1)
+            BorderThickness: =2
+            DropShadow: =DropShadow.Bold
+            FillPortions: =0
+            Height: =656
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            RadiusBottomLeft: =2
+            RadiusBottomRight: =2
+            RadiusTopLeft: =2
+            RadiusTopRight: =2
+            Width: =320
+            X: |
+                =Parent.Width - Container55.Width - 40
+            Y: =72
+            ZIndex: =2
+
+            "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                BorderColor: =RGBA(4, 60, 90, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DelayItemLoading: =true
+                Height: =Parent.Height
+                Items: =Gallery1.Selected
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =639
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Image33 As image:
+                    BorderColor: =RGBA(0, 81, 100, 1)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Height: =200
+                    Image: =ThisItem.Imagem_Banner
+                    ImagePosition: =ImagePosition.Fill
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: |
+                        =Container55.Width - 18
+                    X: =(Parent.TemplateWidth - Image33.Width)/2
+                    Y: =8
+                    ZIndex: =1
+
+                Title5 As label:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    Color: =RGBA(83, 144, 164, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =356
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =0
+                    Text: =ThisItem.Comentario_Stream
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth
+                    X: =
+                    Y: =Title5_1.Y + Title5_1.Height
+                    ZIndex: =2
+
+                Title5_1 As label:
+                    Align: =Align.Center
+                    AutoHeight: =true
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =60
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    Text: =ThisItem.Titulo_Stream
+                    Width: =Parent.TemplateWidth
+                    Y: =208
+                    ZIndex: =4
+
+    Container58 As groupContainer.manualLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.None
+        Height: =60
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =Parent.Width
+        ZIndex: =8
+
+        Label21 As label:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(17, 227, 242, 1)
+            Font: =Font.'Segoe UI'
+            Height: =60
+            PaddingLeft: =0
+            Size: =14
+            Text: ="Detalhes"
+            VerticalAlign: =VerticalAlign.Bottom
+            Width: =259
+            X: =Container55.X
+            ZIndex: =1
+
+        Icon11 As icon.ArrowLeft:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(95, 211, 250, 1)
+            FocusedBorderThickness: =0
+            Height: =72
+            HoverColor: =RGBA(255, 255, 255, 1)
+            Icon: =Icon.Cancel
+            OnSelect: =Set(varVideoST,false)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Width: =87
+            X: =Parent.Width - Icon11.Width
+            ZIndex: =2
+

@@ -1,0 +1,52 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-07-03T16:40:40.9160000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Anexos",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "Nome de arquivo com extensão",
+      "{FullPath}": "Caminho Completo",
+      "{HasAttachments}": "Tem anexos",
+      "{Identifier}": "Identificador",
+      "{IsFolder}": "ÉPasta",
+      "{Link}": "Link para o item",
+      "{ModerationComment}": "Comentários associados à aprovação de conteúdo deste item de lista",
+      "{ModerationStatus}": "Status de aprovação de conteúdo",
+      "{Name}": "Nome",
+      "{Path}": "Caminho da pasta",
+      "{Thumbnail}": "Miniatura",
+      "{TriggerWindowEndToken}": "Token de Fim da Janela de Acionamento",
+      "{TriggerWindowStartToken}": "Token de Início da Janela de Acionamento",
+      "{VersionNumber}": "Número da versão",
+      "Acertos": "Acertos",
+      "Aluno_email": "Aluno_email",
+      "Assistiu": "Assistiu",
+      "Author": "Criado por",
+      "Author#Claims": "Criado por Claims",
+      "ComplianceAssetId": "ID de Ativo de Conformidade",
+      "Created": "Criado",
+      "Curso": "Curso",
+      "Editor": "Modificado por",
+      "Editor#Claims": "Modificado por Claims",
+      "ID": "ID",
+      "ID_Curso": "ID_Curso",
+      "ID_Prova": "ID_Prova",
+      "Matricula": "Matricula",
+      "Modified": "Modificado",
+      "Num_Prova": "Num_Prova",
+      "OData__ColorTag": "Pressione Delete para excluir o ícone.",
+      "Title": "Título"
+    },
+    "DatasetName": "https://bungeltd.sharepoint.com/sites/controladoriadeoperacoes/controladoriaagribusiness/bdcontroladoria",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "BD_Ind_Ans_Exam",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

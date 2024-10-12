@@ -1,0 +1,153 @@
+"Screen4 As screen.'tabletLayout_PeoplePicker_ver3.0'":
+
+    TextSearchBox1 As text:
+        Default: =""
+        HintText: ="Pesquisar"
+        PaddingLeft: =70
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =Parent.Width
+        Y: =
+        ZIndex: =3
+
+    Container61 As groupContainer.manualLayoutContainer:
+        Height: =768
+        Width: =1600
+        ZIndex: =10
+
+        PeopleAddedGallery1 As gallery.SelectedUsersTabletGallery:
+            AccessibleLabel: ="Pessoas selecionadas do usuário"
+            Height: =Parent.Height - Self.Y
+            Items: =MyPeople
+            Layout: =Layout.Vertical
+            TemplateSize: =47
+            Width: =Parent.Width
+            WrapCount: =4
+            Y: =TextSearchBox1.Y + TextSearchBox1.Height + 8
+            ZIndex: =1
+
+            Rectangle2 As rectangle:
+                Height: =Parent.TemplateHeight
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                ZIndex: =1
+
+            Title10 As label:
+                FocusedBorderThickness: =2
+                Height: =PeopleAddedGallery1.TemplateHeight
+                OnSelect: =Set(_selectedUser, ThisItem)
+                PaddingLeft: =10
+                Size: =13
+                TabIndex: =If(UserBrowseGallery1.Visible, -1, 0)
+                Text: =ThisItem.DisplayName
+                Width: =PeopleAddedGallery1.TemplateWidth - iconRemove1.Width + 10
+                Wrap: =false
+                ZIndex: =2
+
+            iconRemove1 As icon.Cancel:
+                AccessibleLabel: =iconRemove1.Tooltip
+                Color: =Title10.Color
+                Height: =PeopleAddedGallery1.TemplateHeight
+                Icon: =Icon.Cancel
+                OnSelect: =Remove(MyPeople, LookUp(MyPeople, UserPrincipalName = ThisItem.UserPrincipalName))
+                PaddingBottom: =9
+                PaddingLeft: =9
+                PaddingRight: =9
+                PaddingTop: =9
+                TabIndex: =If(UserBrowseGallery1.Visible, -1, 0)
+                Tooltip: ="Selecionar para remover usuário da coleção"
+                Width: =Self.Height
+                X: =PeopleAddedGallery1.TemplateWidth - Self.Width
+                ZIndex: =3
+
+        UserBrowseGallery1 As gallery.PeoplePickerTabletGallery:
+            AccessibleLabel: ="Resultados da pesquisa de usuários"
+            Fill: =Parent.Fill
+            Height: =Parent.Height - Self.Y
+            Items: |-
+                =If(!IsBlank(Trim(TextSearchBox1.Text)), 'UsuáriosdoOffice365'.SearchUser({searchTerm: Trim(TextSearchBox1.Text), top: 15}))
+            Layout: =Layout.Vertical
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =87
+            Visible: =!IsBlank(Trim(TextSearchBox1.Text))
+            Width: =Parent.Width
+            Y: =TextSearchBox1.Y + TextSearchBox1.Height
+            ZIndex: =2
+
+            Rectangle3 As rectangle:
+                BorderColor: =Title13.Color
+                BorderThickness: =If(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName, 2, 0)
+                Fill: =RGBA(0,0,0,0)
+                Height: =Parent.TemplateHeight - 2*Self.Y
+                HoverFill: =RGBA(0,0,0,0)
+                OnSelect: =Select(Title13)
+                Width: =Parent.TemplateWidth - 2*Self.X
+                X: =1
+                Y: =1
+                ZIndex: =1
+
+            iconUser1 As icon.Person:
+                Fill: =
+                Height: =ProfileImage1.Height
+                Icon: =Icon.Person
+                OnSelect: =Select(Title13)
+                PaddingBottom: =12
+                PaddingLeft: =12
+                PaddingRight: =12
+                PaddingTop: =12
+                Width: =ProfileImage1.Width
+                X: =ProfileImage1.X
+                Y: =ProfileImage1.Y
+                ZIndex: =2
+
+            ProfileImage1 As image:
+                Height: =Self.Width
+                Image: =If(!IsBlank(ThisItem.Id), 'UsuáriosdoOffice365'.UserPhotoV2(ThisItem.Id))
+                OnSelect: =Select(Title13)
+                Width: =UserBrowseGallery1.TemplateHeight - 30
+                X: =37
+                Y: =(UserBrowseGallery1.TemplateHeight / 2) - (Self.Height/2)
+                ZIndex: =3
+
+            Title13 As label:
+                BorderColor: =Self.Color
+                FocusedBorderThickness: =2
+                FontWeight: =FontWeight.Semibold
+                Height: =Self.Size * 1.8
+                OnSelect: |-
+                    =/*Select user, clear search contents and if this user hasn't been added to MyPeople collection, add them*/
+                    Concurrent(
+                    Set(_selectedUser, ThisItem),
+                    Reset(TextSearchBox1),
+                    If(Not(ThisItem.UserPrincipalName in MyPeople.UserPrincipalName), Collect(MyPeople, ThisItem)))
+                Size: =12
+                TabIndex: =0
+                Text: =ThisItem.DisplayName
+                Width: =UserBrowseGallery1.TemplateWidth - 232
+                Wrap: =false
+                X: =ProfileImage1.X + ProfileImage1.Width + 16
+                Y: =16
+                ZIndex: =4
+
+            Subtitle3 As label:
+                FocusedBorderThickness: =2
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Title13)
+                Size: =12
+                Text: =ThisItem.UserPrincipalName
+                Width: =Title13.Width
+                Wrap: =false
+                X: =Title13.X
+                Y: =UserBrowseGallery1.TemplateHeight - Self.Height - 20
+                ZIndex: =5
+
+            Separator2 As rectangle:
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =6
+

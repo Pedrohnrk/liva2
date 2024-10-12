@@ -1,0 +1,36 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |-
+        =Set(
+            ModeView,
+            TextMode.Password
+        );
+        Set(
+            CadastroColaborador,
+            false
+        );
+        Set(
+            varLogin,
+            true
+        );
+        Set(
+            CadastroSenha,
+            false
+        );
+        Set(
+            varCadastro,
+            false
+        );
+        Refresh(BD_Industrial_training_Login);
+        Refresh(BD_Ind_Stream);
+        Refresh(BD_Ind_train_Bib)
+    StartScreen: ='Inicio-NV'
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

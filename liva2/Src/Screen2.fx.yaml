@@ -1,0 +1,1053 @@
+Screen2 As screen:
+
+    Image1 As image:
+        Height: =Parent.Height
+        Image: ='Novo Projeto (33)'
+        ImagePosition: =ImagePosition.Fill
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Container23 As groupContainer.manualLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.None
+        Height: =646
+        Width: =1147
+        X: =100
+        Y: =19
+        ZIndex: =3
+
+        Container32 As groupContainer.horizontalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.None
+            Height: =607
+            LayoutMode: =LayoutMode.Auto
+            Width: =1120
+            X: =27
+            Y: =21
+            ZIndex: =7
+
+            Form3_5 As form:
+                AcceptsFocus: =Parent.Width
+                BorderColor: =RGBA(8, 90, 140, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =3
+                DataSource: =BD_Ind_train_Bib
+                DefaultMode: =FormMode.New
+                Height: =646
+                LayoutMinHeight: =250
+                LayoutMinWidth: =400
+                OnFailure: =NotificationType.Error
+                OnSuccess: |-
+                    =Patch(BD_Ind_train_Bib, LookUp(BD_Ind_train_Bib, ID = Form3_5.LastSubmit.ID), {Caminho: Last(Form3_5.LastSubmit.Anexos).AbsoluteUri});NewForm(Form3_5)
+                Width: =Parent.Width
+                X: =684
+                ZIndex: =1
+
+                Curso_DataCard2_2 As typedDataCard.textualEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Curso"
+                    Default: =ThisItem.Curso
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Curso)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =102
+                    MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Curso)
+                    Required: =false
+                    Update: =DataCardValue16_2.Text
+                    Width: =828
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+                    DataCardKey25_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    ErrorMessage17_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue16_2.Y + DataCardValue16_2.Height
+                        ZIndex: =3
+
+                    StarVisible17_8 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey25_8.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey25_8.Y
+                        ZIndex: =4
+
+                    DataCardValue16_2 As text:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =4
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(207, 227, 232, 1)
+                        HoverBorderColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        OnChange: =Set(varCurso,DataCardValue16_2.Text)
+                        PaddingLeft: =5
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =40
+                        Y: =DataCardKey25_8.Y + DataCardKey25_8.Height + 5
+                        ZIndex: =5
+
+                ID_training_DataCard1_2 As typedDataCard.textualEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="ID_training"
+                    Default: =ThisItem.ID_training
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,ID_training)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =99
+                    MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, ID_training)
+                    Required: =false
+                    Update: =DataCardValue29_8.Text
+                    Width: =276
+                    X: =2
+                    Y: =0
+                    ZIndex: =3
+
+                    DataCardKey32_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: ="ID do curso"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    ErrorMessage24_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue29_8.Y + DataCardValue29_8.Height
+                        ZIndex: =3
+
+                    StarVisible24_8 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey32_8.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey32_8.Y
+                        ZIndex: =4
+
+                    DataCardValue29_8 As text:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =4
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(207, 227, 232, 1)
+                        HoverBorderColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        PaddingLeft: =5
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =40
+                        Y: |-
+                            =DataCardKey32_8.Y + DataCardKey32_8
+                            .Height + 5
+                        ZIndex: =5
+
+                Trilha_DataCard2_2 As typedDataCard.textualEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Trilha"
+                    Default: =ThisItem.Trilha
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Trilha)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =99
+                    MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Trilha)
+                    Required: =false
+                    Update: =DataCardValue25_11.Text
+                    Visible: =true
+                    Width: =828
+                    X: =0
+                    Y: =1
+                    ZIndex: =3
+
+                    DataCardKey26_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: ="Nome da trilha"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    ErrorMessage18_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue25_11.Y + DataCardValue25_11.Height
+                        ZIndex: =3
+
+                    StarVisible18_8 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey26_8.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey26_8.Y
+                        ZIndex: =4
+
+                    DataCardValue25_11 As text:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =4
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(207, 227, 232, 1)
+                        HoverBorderColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        PaddingLeft: =5
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =40
+                        Y: =57
+                        ZIndex: =5
+
+                ID_Lession_DataCard1_2 As typedDataCard.textualEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Txtimg"
+                    Default: =ThisItem.ID_Lession
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,ID_Lession)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, ID_Lession)
+                    Required: =false
+                    Update: =DataCardValue28_8.Text
+                    Width: =276
+                    X: =2
+                    Y: =1
+                    ZIndex: =3
+
+                    DataCardKey31_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: ="ID da trilha"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =32
+                        Y: =10
+                        ZIndex: =1
+
+                    ErrorMessage23_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue28_8.Y + DataCardValue28_8.Height
+                        ZIndex: =3
+
+                    StarVisible23_8 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey31_8.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey31_8.Y
+                        ZIndex: =4
+
+                    DataCardValue28_8 As text:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =4
+                        Color: =RGBA(62, 128, 149, 1)
+                        Default: =If(LookUp(BD_Ind_train_Bib,Curso = DataCardValue16_2.Text,ID_Lession)=Blank(),"1")
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(207, 227, 232, 1)
+                        HoverBorderColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        PaddingLeft: =5
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =40
+                        Y: =48
+                        ZIndex: =5
+
+                    Label14_8 As label:
+                        Text: =LookUp(BD_Ind_train_Bib,Curso = DataCardValue16_2.Text,ID_Lession)
+                        X: =65
+                        Y: =4
+                        ZIndex: =6
+
+                Sinopse_DataCard1_2 As typedDataCard.textualEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Sinopse"
+                    Default: =ThisItem.Sinopse
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Sinopse)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =154
+                    MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Sinopse)
+                    Required: =false
+                    Update: =DataCardValue30_10.Text
+                    Width: =828
+                    X: =0
+                    Y: =2
+                    ZIndex: =3
+
+                    DataCardKey33_2 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    ErrorMessage25_2 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue30_10.Y + DataCardValue30_10.Height
+                        ZIndex: =3
+
+                    StarVisible25_2 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey33_2.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey33_2.Y
+                        ZIndex: =4
+
+                    DataCardValue30_10 As text:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =4
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(207, 227, 232, 1)
+                        Height: =86
+                        HoverBorderColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        Mode: =TextMode.MultiLine
+                        PaddingLeft: =5
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =40
+                        Y: =DataCardKey33_2.Y + DataCardKey33_2.Height + 5
+                        ZIndex: =5
+
+                Duração_DataCard2_2 As typedDataCard.textualEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Dura_x00e7__x00e3_o"
+                    Default: =ThisItem.Duração
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Duração)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =106
+                    MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Duração)
+                    Required: =false
+                    Update: =DataCardValue26_8.Text
+                    Width: =276
+                    X: =2
+                    Y: =2
+                    ZIndex: =3
+
+                    DataCardKey27_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    ErrorMessage19_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue26_8.Y + DataCardValue26_8.Height
+                        ZIndex: =3
+
+                    StarVisible19_8 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey27_8.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey27_8.Y
+                        ZIndex: =4
+
+                    DataCardValue26_8 As text:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =4
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(207, 227, 232, 1)
+                        HoverBorderColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        PaddingLeft: =5
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =40
+                        Y: =DataCardKey27_8.Y + DataCardKey27_8.Height + 5
+                        ZIndex: =5
+
+                Capa_DataCard2_2 As typedDataCard.addLargePictureCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Capa"
+                    Default: =ThisItem.Capa
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Capa)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =229
+                    Required: =false
+                    Update: =Image37_2.Image
+                    Width: =414
+                    X: =0
+                    Y: =3
+                    ZIndex: =3
+
+                    DataCardKey28_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    Image37_2 As image:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =AddPicture2_2.Height
+                        Image: =If(IsBlank(AddPicture2_2.Media), Parent.Default, AddPicture2_2.Media)
+                        Tooltip: =Parent.DisplayName
+                        Width: =AddPicture2_2.Width
+                        X: =AddPicture2_2.X
+                        Y: =AddPicture2_2.Y
+                        ZIndex: =2
+
+                    AddPicture2_2 As addMedia:
+                        Color: =RGBA(62, 128, 149, 1)
+                        FontWeight: =FontWeight.Normal
+                        Height: =183
+                        Width: =Parent.Width - 60
+                        X: =33
+                        Y: =44
+                        ZIndex: =3
+
+                    ErrorMessage20_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =Image37_2.Y + Image37_2.Height
+                        ZIndex: =4
+
+                    StarVisible20_8 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey28_8.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey28_8.Y
+                        ZIndex: =5
+
+                Capa_trilha_DataCard2_2 As typedDataCard.addLargePictureCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Capa_trilha"
+                    Default: =ThisItem.Capa_trilha
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Capa_trilha)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =Image38_2.Image
+                    Visible: =true
+                    Width: =414
+                    X: =1
+                    Y: =3
+                    ZIndex: =3
+
+                    DataCardKey30_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: ="Capa da trilha"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    Image38_2 As image:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        DisplayMode: =Parent.DisplayMode
+                        Height: =AddPicture3_2.Height
+                        Image: =If(IsBlank(AddPicture3_2.Media), Parent.Default, AddPicture3_2.Media)
+                        Tooltip: =Parent.DisplayName
+                        Width: =AddPicture3_2.Width
+                        X: =AddPicture3_2.X
+                        Y: =AddPicture3_2.Y
+                        ZIndex: =2
+
+                    AddPicture3_2 As addMedia:
+                        Color: =RGBA(62, 128, 149, 1)
+                        Height: =173
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey30_8.Y + DataCardKey30_8.Height + 5
+                        ZIndex: =3
+
+                    ErrorMessage22_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =Image38_2.Y + Image38_2.Height
+                        ZIndex: =4
+
+                    StarVisible22_8 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey30_8.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey30_8.Y
+                        ZIndex: =5
+
+                Anexos_DataCard2_2 As typedDataCard.attachmentsEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="{Attachments}"
+                    Default: =ThisItem.Anexos
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Anexos)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =DataCardValue35_2.Attachments
+                    Visible: =true
+                    Width: =276
+                    X: =2
+                    Y: =3
+                    ZIndex: =3
+
+                    DataCardKey36_2 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue35_2 As attachments:
+                        BorderColor: =RGBA(40, 134, 222, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =125
+                        IsInDataCard: =true
+                        Items: =Parent.Default
+                        MaxAttachments: =1
+                        MaxAttachmentSize: =50
+                        PaddingBottom: =5
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Size: =11
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =40
+                        Y: =59
+                        ZIndex: =2
+
+                    ErrorMessage28_2 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue35_2.Y + DataCardValue35_2.Height
+                        ZIndex: =3
+
+                    StarVisible28_2 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey36_2.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey36_2.Y
+                        ZIndex: =4
+
+                Caminho_DataCard2_2 As typedDataCard.textualEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Caminho"
+                    Default: =ThisItem.Caminho
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Caminho)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Caminho)
+                    Required: =false
+                    Update: =DataCardValue27_8.Text
+                    Visible: =false
+                    Width: =276
+                    X: =0
+                    Y: =4
+                    ZIndex: =3
+
+                    DataCardKey29_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    ErrorMessage21_8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue27_8.Y + DataCardValue27_8.Height
+                        ZIndex: =3
+
+                    StarVisible21_8 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey29_8.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey29_8.Y
+                        ZIndex: =4
+
+                    DataCardValue27_8 As text:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =4
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(207, 227, 232, 1)
+                        HoverBorderColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        PaddingLeft: =5
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =40
+                        Y: =DataCardKey29_8.Y + DataCardKey29_8.Height + 5
+                        ZIndex: =5
+
+                Video_Column_DataCard1_2 As typedDataCard.textualEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Video_Column"
+                    Default: =ThisItem.Video_Column
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Video_Column)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Video_Column)
+                    Required: =false
+                    Update: =DataCardValue31_8.Text
+                    Visible: =false
+                    Width: =276
+                    X: =1
+                    Y: =4
+                    ZIndex: =3
+
+                    DataCardKey34_2 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue31_8 As text:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        MaxLength: =Parent.MaxLength
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey34_2.Y + DataCardKey34_2.Height + 5
+                        ZIndex: =2
+
+                    ErrorMessage26_2 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue31_8.Y + DataCardValue31_8.Height
+                        ZIndex: =3
+
+                    StarVisible26_2 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey34_2.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey34_2.Y
+                        ZIndex: =4
+
+                Título_DataCard1_2 As typedDataCard.textualEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="Title"
+                    Default: =ThisItem.Título
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@BD_Ind_train_Bib],DataSourceInfo.DisplayName,Título)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    MaxLength: =DataSourceInfo([@BD_Ind_train_Bib], DataSourceInfo.MaxLength, Título)
+                    Required: =false
+                    Update: =DataCardValue13_3.Text
+                    Visible: =false
+                    Width: =276
+                    WidthFit: =true
+                    X: =2
+                    Y: =4
+                    ZIndex: =3
+
+                    DataCardKey13_3 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    ErrorMessage13_3 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(168, 0, 0, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =14
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue13_3.Y + DataCardValue13_3.Height
+                        ZIndex: =3
+
+                    StarVisible13_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        Color: =RGBA(0, 18, 107, 1)
+                        Height: =DataCardKey13_3.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey13_3.Y
+                        ZIndex: =4
+
+                    DataCardValue13_3 As text:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =4
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =RGBA(207, 227, 232, 1)
+                        HoverBorderColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        PaddingLeft: =5
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =40
+                        Y: =DataCardKey13_3.Y + DataCardKey13_3.Height + 5
+                        ZIndex: =5
+
+    Button1_7 As button:
+        BorderColor: =RGBA(29, 195, 245, 1)
+        BorderThickness: =3
+        Color: =RGBA(204, 231, 246, 1)
+        DisabledBorderColor: =RGBA(76, 211, 252, 0.5)
+        DisabledColor: =RGBA(102, 182, 227, 1)
+        DisabledFill: =RGBA(12, 157, 201, 0.3)
+        Fill: =RGBA(12, 157, 201, 0.5)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Normal
+        HoverFill: =RGBA(10, 186, 240, 1)
+        OnSelect: =SubmitForm(Form3_5);Set(varCurso,DataCardValue16_2.Text)
+        PaddingBottom: =5.86
+        PaddingLeft: =5.86
+        PaddingRight: =5.86
+        PaddingTop: =5.86
+        PressedBorderColor: =RGBA(12, 157, 201, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(40, 209, 198, 1)
+        RadiusBottomLeft: =3
+        RadiusBottomRight: =3
+        RadiusTopLeft: =3
+        RadiusTopRight: =3
+        Size: =13
+        Text: ="Salva"
+        Visible: =varLogin
+        Width: =Container1_1.Width - 45
+        X: =442
+        Y: =625
+        ZIndex: =5
+

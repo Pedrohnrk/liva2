@@ -1,0 +1,2736 @@
+"Streaming As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    BackgroundImage: ='999 (1)'
+    ImagePosition: =ImagePosition.Fill
+    OnVisible: |-
+        =//ForAll(Gallery10.AllItems; Collect(image_bd_stream; {Step: ThisRecord.ID; Text: ThisRecord.Titulo_Stream; Image: ThisRecord.Imagem_Banner.Full}))
+        Clear(image_bd_stream);
+        ForAll(
+            Gallery10.AllItems,
+            Collect(
+                image_bd_stream,
+                {
+                    Step: ThisRecord.ID,
+                    Text: ThisRecord.Titulo_Stream,
+                    Image: ThisRecord.Imagem_Banner.Full,
+                    Comentario: ThisRecord.Comentario_Stream
+                }
+            )
+        );
+        Set(
+            _guideStep,
+            First(TutorialNavigator1_2.AllItems).Step
+        );
+        Set(
+            varTipo,
+            "Banner"
+        );
+        Set(
+            varAdd,
+            false
+        );
+        Set(
+            varVideoST,
+            false
+        );
+        Set(
+            varSearch,
+            false
+        )
+
+    Image31 As image:
+        BorderStyle: =BorderStyle.None
+        Height: =614
+        Image: ='Camada 1 (17)'
+        ImagePosition: =ImagePosition.Stretch
+        Width: =Parent.Width
+        Y: =Parent.Height - Image31.Height
+        ZIndex: =1
+
+    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width - Menu_lateral.Width
+        X: =Menu_lateral.Width
+        Y: =
+        ZIndex: =2
+
+        DataCard1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1027
+            Visible: =true
+            Width: =Parent.Width
+            WidthFit: =true
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Image22 As image:
+                BorderStyle: =BorderStyle.None
+                Height: =495
+                Image: ='7'
+                Width: =525
+                X: =Parent.Width - Image22.Width - 20
+                Y: =60
+                ZIndex: =2
+
+            Container39 As groupContainer.verticalAutoLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutGap: =8
+                LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =3
+
+                ScreenContainer5 As groupContainer.verticalAutoLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    DropShadow: =DropShadow.None
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =4
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =4
+                    PaddingLeft: =4
+                    PaddingRight: =4
+                    PaddingTop: =16
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    Container42_2 As groupContainer.manualLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =40
+                        LayoutMinHeight: =40
+                        LayoutMinWidth: =250
+                        ZIndex: =1
+
+                        Image30 As image:
+                            BorderStyle: =BorderStyle.None
+                            Height: =40
+                            Image: ='Bunge-REV'
+                            PaddingBottom: =8
+                            PaddingLeft: =8
+                            PaddingRight: =8
+                            PaddingTop: =8
+                            Visible: =false
+                            X: |
+                                =Container42_2.Width - Image30.Width - 30
+                            ZIndex: =4
+
+                        Group12 As group:
+                            Height: =5
+                            Width: =5
+                            X: =40
+                            Y: =40
+                            ZIndex: =4
+
+                            Image7 As image:
+                                Height: =18
+                                Image: ='1 (2)'
+                                Tooltip: ="By pedro.s.araujo"
+                                Width: =21
+                                X: =213
+                                Y: =11
+                                ZIndex: =1
+
+                            Label15 As label:
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(255, 255, 255, 1)
+                                Font: ="Montserrat"
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =16
+                                Text: ="Industry"
+                                Tooltip: ="By pedro.s.araujo"
+                                Width: =101
+                                X: =8
+                                ZIndex: =2
+
+                            Label15_2 As label:
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(255, 255, 255, 1)
+                                Font: ="Montserrat"
+                                FontWeight: =FontWeight.Bold
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =16
+                                Text: ="streaming"
+                                Tooltip: ="By pedro.s.araujo"
+                                Width: =157
+                                X: =100
+                                ZIndex: =3
+
+                    Container42_1 As groupContainer.manualLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =80
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        ZIndex: =2
+
+                        Group11 As group:
+                            Height: =5
+                            Width: =5
+                            X: =40
+                            Y: =40
+                            ZIndex: =3
+
+                            TextInput7_1 As text:
+                                BorderColor: =RGBA(0, 217, 255, 0.41)
+                                BorderThickness: =1
+                                Clear: =true
+                                Color: =RGBA(255, 255, 255, 1)
+                                Default: =""
+                                DelayOutput: =true
+                                Fill: =RGBA(4, 60, 90, 0.42)
+                                FocusedBorderThickness: =2
+                                Font: =Font.'Segoe UI'
+                                HoverBorderColor: =RGBA(0, 217, 255, 1)
+                                HoverColor: =RGBA(255, 255, 255, 1)
+                                HoverFill: =RGBA(0, 0, 0, 0)
+                                OnChange: =If(IsBlank(TextInput7_1.Text), Set(varSearch,false),!IsBlank(TextInput7_1.Text),Set(varSearch,true))
+                                OnSelect: |-
+                                    =//If(IsBlank(TextInput7_1.Text); Set(varSearch;"false");!IsBlank(TextInput7_1.Text);Set(varSearch;"true"))
+                                    //Set(varSearch;"true")
+                                PaddingLeft: =50
+                                PressedBorderColor: =
+                                RadiusBottomLeft: =8
+                                RadiusBottomRight: =8
+                                RadiusTopLeft: =8
+                                RadiusTopRight: =8
+                                Size: =14
+                                Width: =TutorialImage1_4.Width /*If(varSearch = "true";TutorialImage1_4.Width;80)*/
+                                X: =8
+                                Y: =32
+                                ZIndex: =1
+
+                            Icon9_3 As icon.Search:
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(180, 214, 250, 1)
+                                DisabledColor: =RGBA(83, 144, 164, 1)
+                                Height: =40
+                                Icon: =Icon.Search
+                                OnSelect: =If( varSearch = true, Set(varSearch,false) ,Set(varSearch,true))
+                                PaddingBottom: =8
+                                PaddingTop: =8
+                                Width: =40
+                                X: =16
+                                Y: =32
+                                ZIndex: =2
+
+                    Container42 As groupContainer.manualLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =60
+                        LayoutMinHeight: =40
+                        LayoutMinWidth: =250
+                        PaddingTop: =16
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        ZIndex: =3
+
+                        Label2 As label:
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(0, 217, 255, 1)
+                            DisplayMode: =DisplayMode.View
+                            Font: =Font.'Segoe UI'
+                            Height: =50
+                            PaddingLeft: =8
+                            Size: =14
+                            Text: ="Conheça as unidades"
+                            VerticalAlign: =VerticalAlign.Bottom
+                            Width: =Gallery10.Width + 17
+                            X: |+
+                                =TutorialImage1_4.Width + 20
+                                
+                            Y: =10
+                            ZIndex: =3
+
+                        Label2_4 As label:
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(0, 217, 255, 1)
+                            DisplayMode: =DisplayMode.View
+                            Font: =Font.'Segoe UI'
+                            Height: =50
+                            PaddingLeft: =8
+                            Size: =14
+                            Text: ="Destaques"
+                            VerticalAlign: =VerticalAlign.Bottom
+                            Width: =TutorialImage1_4.Width
+                            Y: =10
+                            ZIndex: =4
+
+                    MainContainer5 As groupContainer.verticalAutoLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Parent.Height/2.5
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutGap: =16
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =8
+                        PaddingLeft: =8
+                        PaddingTop: =8
+                        RadiusBottomLeft: =32
+                        RadiusBottomRight: =32
+                        RadiusTopLeft: =32
+                        RadiusTopRight: =32
+                        ZIndex: =4
+
+                        Container40_1 As groupContainer.manualLayoutContainer:
+                            BorderColor: =RGBA(0, 217, 255, 1)
+                            BorderThickness: =1
+                            DropShadow: =DropShadow.Semibold
+                            Height: =Parent.Height
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            PaddingLeft: =16
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            ZIndex: =1
+
+                            TutorialImage1_3 As image:
+                                AccessibleLabel: ="Layouts_Tutorial_Image_Accessible_Text"
+                                BorderColor: =RGBA(102, 182, 227, 1)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Height: =Container40_1.Height
+                                Image: |-
+                                    =LookUp(image_bd_stream, _guideStep = Step, Image)
+                                    
+                                    /*If(IsBlank(_guideStep); First(TutorialNavigator1_2.AllItems).Image; LookUp(TutorialNavigator1_2.AllItems; Step = _guideStep).Image)*/
+                                ImagePosition: =ImagePosition.Fill
+                                RadiusBottomLeft: =6
+                                RadiusBottomRight: =6
+                                RadiusTopLeft: =6
+                                RadiusTopRight: =6
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                            TutorialImage1_4 As image:
+                                AccessibleLabel: ="Layouts_Tutorial_Image_Accessible_Text"
+                                BorderColor: =RGBA(0, 217, 255, 1)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Height: =Container40_1.Height
+                                Image: ='Novo Projeto (35) (1) (2)'
+                                ImagePosition: =ImagePosition.Stretch
+                                RadiusBottomLeft: =6
+                                RadiusBottomRight: =6
+                                RadiusTopLeft: =6
+                                RadiusTopRight: =6
+                                Width: |
+                                    =Parent.Width 
+                                ZIndex: =2
+
+                            iconNext1_2 As icon.ChevronRight:
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(255, 255, 255, 1)
+                                HoverColor: =RGBA(0, 217, 255, 1)
+                                Icon: =Icon.ChevronRight
+                                OnSelect: |-
+                                    =Set(
+                                        _guideStep,
+                                        Min(
+                                            _guideStep + 1,
+                                            Last(TutorialNavigator1_2.AllItems).Step
+                                        )
+                                    )
+                                TabIndex: =0
+                                Tooltip: ="Próxima etapa"
+                                Visible: =Last(Gallery10.AllItems).ID > _guideStep
+                                Width: =40
+                                X: =Parent.Width - iconNext1_2.Width - 16
+                                Y: =(Parent.Height - iconPrev1_2.Height)/2
+                                ZIndex: =3
+
+                            iconPrev1_2 As icon.ChevronLeft:
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(255, 255, 255, 1)
+                                HoverColor: =RGBA(0, 217, 255, 1)
+                                Icon: =Icon.ChevronLeft
+                                OnSelect: =Set(_guideStep, Max(_guideStep-1, First(TutorialNavigator1_2.AllItems).Step))
+                                TabIndex: =0
+                                Tooltip: ="Etapa anterior"
+                                Visible: =_guideStep > 1
+                                Width: =40
+                                X: =Parent.X + 16
+                                Y: =(Parent.Height - iconPrev1_2.Height)/2
+                                ZIndex: =4
+
+                            TutorialText1_2 As label:
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(255, 255, 255, 1)
+                                Font: ="Montserrat"
+                                Height: =60
+                                Italic: =true
+                                LineHeight: =1.3
+                                PaddingBottom: =4
+                                PaddingLeft: =20
+                                PaddingRight: =20
+                                PaddingTop: =4
+                                Size: =12
+                                Text: |-
+                                    =LookUp(image_bd_stream, _guideStep = Step, Comentario)
+                                    /*If(IsBlank(_guideStep); First(TutorialNavigator1_2.AllItems).Text; LookUp(TutorialNavigator1_2.AllItems; Step = _guideStep).Text)*/
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =iconNext1_2.X - iconNext1_2.Width - iconPrev1_2.X
+                                X: =iconPrev1_2.X + iconPrev1_2.Width
+                                Y: =Parent.Height - TutorialText1_2.Height - TutorialNavigator1_2.Height - 30
+                                ZIndex: =5
+
+                            TutorialText1_3 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(255, 255, 255, 1)
+                                Font: ="Montserrat"
+                                FontWeight: =FontWeight.Bold
+                                LineHeight: =1.3
+                                PaddingLeft: =20
+                                PaddingRight: =20
+                                Size: =16
+                                Text: |-
+                                    =LookUp(image_bd_stream, _guideStep = Step, Text)
+                                    /*If(IsBlank(_guideStep); First(TutorialNavigator1_2.AllItems).Text; LookUp(TutorialNavigator1_2.AllItems; Step = _guideStep).Text)*/
+                                Width: =iconNext1_2.X - iconNext1_2.Width - iconPrev1_2.X
+                                X: =iconPrev1_2.X + iconPrev1_2.Width
+                                Y: =Parent.Height - TutorialText1_2.Height - TutorialNavigator1_2.Height - 70
+                                ZIndex: =6
+
+                            TutorialNavigator1_2 As gallery.TutorialGalleryHorizontal:
+                                AccessibleLabel: ="Layouts_Tutorial_Gallery_Accessible_Text"
+                                BorderColor: =RGBA(174, 208, 221, 1)
+                                Height: =35
+                                Items: =image_bd_stream
+                                ShowScrollbar: =false
+                                TemplatePadding: =8
+                                TemplateSize: =25
+                                Width: =CountRows(Self.AllItems) * (Self.TemplateWidth + Self.TemplatePadding) 
+                                X: =(Parent.Width - TutorialNavigator1_2.Width)/2
+                                Y: =Container40_1.Height - TutorialNavigator1_2.Height - 5
+                                ZIndex: =7
+
+                                Circle1_2 As circle:
+                                    BorderColor: =RGBA(255, 255, 255, 1)
+                                    BorderThickness: =2
+                                    Fill: =If(ThisItem.Step = _guideStep, Color.Green,  RGBA(0,0,0,0))
+                                    FocusedBorderThickness: =4
+                                    Height: =8
+                                    OnSelect: =Set(_guideStep, ThisItem.Step)
+                                    TabIndex: =0
+                                    Width: =8
+                                    X: =Parent.TemplateWidth/2 - Self.Width/2
+                                    ZIndex: =1
+
+                        Button10 As button:
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =1
+                            DisabledColor: =RGBA(180, 214, 250, 1)
+                            DisabledFill: =RGBA(0, 217, 255, 1)
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =Gallery10.Height
+                            Text: =
+                            Width: =1
+                            X: =40
+                            Y: =40
+                            ZIndex: =2
+
+                        Container40 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            BorderStyle: =BorderStyle.None
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =Parent.Height
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            ZIndex: =3
+
+                            "Gallery10 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                                BorderStyle: =BorderStyle.None
+                                DelayItemLoading: =true
+                                Height: =Container40_1.Height
+                                Items: =Filter(BD_Ind_Stream,Tipo_Strem = "Banner")
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplatePadding: =0
+                                TemplateSize: =80
+                                Width: |
+                                    =Parent.Width -24
+                                ZIndex: =1
+
+                                Image24 As image:
+                                    BorderColor: =RGBA(62, 128, 149, 1)
+                                    BorderThickness: =2
+                                    Height: =60
+                                    Image: =ThisItem.Imagem_Banner
+                                    ImagePosition: =ImagePosition.Fill
+                                    OnSelect: =Select(Parent)
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =60
+                                    X: =8
+                                    Y: =8
+                                    ZIndex: =1
+
+                                Title2 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Color: =RGBA(255, 255, 255, 1)
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =ThisItem.Titulo_Stream
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Parent.TemplateWidth - 173
+                                    X: =82
+                                    Y: =8
+                                    ZIndex: =2
+
+                                Subtitle2 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Color: =RGBA(180, 214, 250, 1)
+                                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                                    Height: =Self.Size * 1.8
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =9
+                                    Text: =ThisItem.ID
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Visible: =false
+                                    Width: =Title2.Width
+                                    X: =99
+                                    Y: =42
+                                    ZIndex: =3
+
+                                NextArrow1 As icon.ChevronRight:
+                                    AccessibleLabel: =Self.Tooltip
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Color: =RGBA(166, 166, 166, 1)
+                                    DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                                    DisabledColor: =RGBA(119, 119, 119, 1)
+                                    Height: =50
+                                    Icon: =Icon.ChevronRight
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =16
+                                    PaddingLeft: =16
+                                    PaddingRight: =16
+                                    PaddingTop: =16
+                                    Tooltip: ="Exibir detalhes do item"
+                                    Visible: =false
+                                    Width: =50
+                                    X: =Parent.TemplateWidth - Self.Width - 12
+                                    Y: =28
+                                    ZIndex: =4
+
+                                Subtitle2_1 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                    Color: =RGBA(95, 211, 250, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =Self.Size * 4
+                                    OnSelect: =Select(Parent)
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =10
+                                    Text: =ThisItem.Comentario_Stream
+                                    VerticalAlign: =VerticalAlign.Top
+                                    Width: =Title2.Width
+                                    X: =82
+                                    Y: =33
+                                    ZIndex: =5
+
+                                Button3_11 As button:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledBorderColor: =RGBA(40, 134, 222, 1)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    Fill: =RGBA(0, 0, 0, 0)
+                                    Height: =72
+                                    HoverBorderColor: =RGBA(0, 217, 255, 1)
+                                    HoverFill: =
+                                    OnSelect: =Parent.Selected;Set(varVideoST,true)
+                                    PressedFill: =
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Text: =""
+                                    Width: =Parent.Width -24
+                                    X: =2
+                                    Y: =2
+                                    ZIndex: =6
+
+                    FooterContainer2 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        Height: =Parent.Height/2.5
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =8
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Parent.Width/2
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =8
+                        PaddingRight: =8
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: |
+                            =Parent.Width - 40
+                        ZIndex: =5
+
+                        Label2_1 As label:
+                            AlignInContainer: =AlignInContainer.Start
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(0, 217, 255, 1)
+                            Font: =Font.Lato
+                            Height: =60
+                            PaddingLeft: =0
+                            PaddingTop: =24
+                            Size: =14
+                            Text: ="Outras filiais"
+                            Width: =487
+                            X: =977
+                            Y: =40
+                            ZIndex: =1
+
+                        "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            BorderStyle: =BorderStyle.None
+                            DelayItemLoading: =true
+                            Height: =400
+                            Items: |-
+                                =Filter(BD_Ind_Stream,Tipo_Strem="Videos")
+                                
+                                //Filter(BD_Ind_Stream;Tipo_Strem = "Video")
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =300
+                            LoadingSpinner: =LoadingSpinner.Data
+                            OnSelect: =
+                            ShowNavigation: =true
+                            ShowScrollbar: =false
+                            TemplatePadding: =0
+                            TemplateSize: =200
+                            Transition: =Transition.Pop
+                            Width: =Parent.Width -40
+                            ZIndex: =2
+
+                            Image22_1 As image:
+                                BorderColor: =RGBA(62, 128, 149, 1)
+                                BorderStyle: =BorderStyle.None
+                                Fill: =RGBA(132, 40, 38, 1)
+                                Height: =Parent.TemplateHeight /1.1
+                                HoverBorderColor: =RGBA(95, 211, 250, 1)
+                                Image: =ThisItem.Imagem_Banner
+                                ImagePosition: =ImagePosition.Fill
+                                OnSelect: =Select(Parent);Set(varVideoST,true);Set(varVideo3,Title1_2.Text)
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =Parent.TemplateWidth  - 20
+                                X: =8
+                                Y: =8
+                                ZIndex: =1
+
+                            Image9 As image:
+                                BorderStyle: =BorderStyle.None
+                                Height: =Parent.TemplateHeight /1.1
+                                Image: ='Camada 1 (13)'
+                                ImagePosition: =ImagePosition.Stretch
+                                OnSelect: =Select(Parent)
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =Parent.TemplateWidth  - 20
+                                X: =8
+                                Y: =8
+                                ZIndex: =2
+
+                            Title1 As label:
+                                Align: =Align.Center
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(255, 255, 255, 1)
+                                Font: |
+                                    ="Montserrat"
+                                FontWeight: =FontWeight.Semibold
+                                Height: =65
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =8
+                                PaddingLeft: =8
+                                PaddingRight: =8
+                                PaddingTop: =8
+                                Text: =ThisItem.Titulo_Stream
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Parent.TemplateWidth  - 20
+                                X: =8
+                                Y: =160
+                                ZIndex: =3
+
+                            Title1_1 As label:
+                                Align: =Align.Center
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(95, 211, 250, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =30
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =8
+                                PaddingLeft: =8
+                                PaddingRight: =8
+                                PaddingTop: =8
+                                Size: =14
+                                Text: =ThisItem.Filial_Stream
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Parent.TemplateWidth  - 20
+                                X: =8
+                                Y: =213
+                                ZIndex: =4
+
+                            Title1_2 As label:
+                                Align: =Align.Center
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(255, 255, 255, 1)
+                                Font: |
+                                    ="Montserrat"
+                                FontWeight: =FontWeight.Semibold
+                                Height: =65
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =8
+                                PaddingLeft: =8
+                                PaddingRight: =8
+                                PaddingTop: =8
+                                Size: =14
+                                Text: =ThisItem.Video_Stream
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =false
+                                Width: =175
+                                X: =8
+                                Y: =8
+                                ZIndex: =5
+
+                            Button3_19 As button:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledBorderColor: =RGBA(40, 134, 222, 1)
+                                DisabledFill: =RGBA(0, 0, 0, 0)
+                                Fill: =RGBA(0, 0, 0, 0)
+                                Height: =Parent.TemplateHeight /1.1
+                                HoverBorderColor: =RGBA(0, 217, 255, 1)
+                                HoverFill: =
+                                OnSelect: =Parent.Selected;Set(varVideoST,true)
+                                PressedFill: =
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Text: =""
+                                Width: =Parent.TemplateWidth  - 20
+                                X: =8
+                                Y: =8
+                                ZIndex: =6
+
+                    Container53 As groupContainer.manualLayoutContainer:
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =80
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        ZIndex: =6
+
+                        Image41 As image:
+                            BorderStyle: =BorderStyle.None
+                            Height: =34
+                            Image: =PPP2
+                            PaddingBottom: =8
+                            PaddingTop: =8
+                            Tooltip: ="By pedro.s.araujo"
+                            Width: =Parent.Width - 58
+                            Y: =32
+                            ZIndex: =1
+
+                        Label7_11 As label:
+                            Align: =Align.Center
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(180, 214, 250, 1)
+                            DisabledColor: =RGBA(0, 217, 255, 1)
+                            DisplayMode: =DisplayMode.Disabled
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            HoverColor: =RGBA(180, 214, 250, 1)
+                            PaddingBottom: =0
+                            PaddingTop: =0
+                            Size: =9
+                            Text: ="Controladoria de Operações | NEXPER 2024 ©"
+                            Tooltip: ="By pedro.s.araujo"
+                            VerticalAlign: =VerticalAlign.Bottom
+                            Width: |
+                                =Parent.Width  - 58
+                            Y: =50
+                            ZIndex: =2
+
+            Pesquisa As groupContainer.manualLayoutContainer:
+                BorderColor: =RGBA(4, 60, 90, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =16
+                DropShadow: =DropShadow.ExtraBold
+                Height: |
+                    =Parent.Height
+                RadiusBottomLeft: =16
+                RadiusBottomRight: =16
+                RadiusTopLeft: =16
+                RadiusTopRight: =16
+                Visible: =varSearch
+                Width: |
+                    =Parent.Width
+                Y: =120
+                ZIndex: =4
+
+                Image26 As image:
+                    BorderColor: =RGBA(4, 60, 90, 1)
+                    BorderStyle: =BorderStyle.None
+                    Height: =Parent.Height
+                    Image: ='Novo Projeto (33)'
+                    ImagePosition: =ImagePosition.Fill
+                    RadiusBottomLeft: =16
+                    RadiusBottomRight: =16
+                    RadiusTopLeft: =16
+                    RadiusTopRight: =16
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                MainContainer2_3 As groupContainer.horizontalAutoLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    DropShadow: =DropShadow.None
+                    Fill: =Parent.Fill
+                    Height: =Parent.Height
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Width: =Parent.Width - 20
+                    X: =16
+                    ZIndex: =2
+
+                    Icon16 As icon.Cancel:
+                        AlignInContainer: =AlignInContainer.End
+                        Color: =RGBA(180, 214, 250, 1)
+                        Height: =40
+                        HoverColor: =RGBA(240, 98, 15, 1)
+                        Icon: =Icon.Cancel
+                        OnSelect: =Set(varSearch,false)
+                        PaddingBottom: =8
+                        PaddingLeft: =8
+                        PaddingRight: =20
+                        PaddingTop: =8
+                        X: =1204
+                        ZIndex: =1
+
+                    Label17 As label:
+                        AlignInContainer: =AlignInContainer.Start
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(83, 144, 164, 1)
+                        Font: |
+                            ="Montserrat"
+                        Text: |-
+                            ="Resultado da pesquisa:"
+                        Width: =320
+                        ZIndex: =2
+
+                    "Gallery12 As gallery.'BrowseLayout_Vertical_OneImageThreeColumnVariant_ver5.0'":
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        DelayItemLoading: =true
+                        Height: =MainContainer2_3.Height
+                        Items: =Search(Filter( BD_Ind_Stream,Tipo_Strem = "Videos" ),TextInput7_1.Text, Titulo_Stream ,Comentario_Stream,Filial_Stream,Tipo_Strem)
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =10
+                        TemplateSize: =250
+                        Width: =Parent.Width
+                        WrapCount: =6
+                        X: =40
+                        Y: =40
+                        ZIndex: =3
+
+                        Image10 As image:
+                            BorderColor: =RGBA(15, 84, 140, 1)
+                            BorderThickness: =4
+                            Height: =Parent.TemplateHeight
+                            HoverFill: =
+                            Image: =ThisItem.Imagem_Banner
+                            ImagePosition: =ImagePosition.Fill
+                            OnSelect: =Select(Parent)
+                            PressedFill: =
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Width: =Parent.TemplateWidth
+                            ZIndex: =1
+
+                        Image10_1 As image:
+                            Height: =Parent.TemplateHeight
+                            Image: ='Novo Projeto (35) (1) (2)'
+                            ImagePosition: =ImagePosition.Stretch
+                            OnSelect: =Select(Parent)
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Width: =Parent.TemplateWidth
+                            ZIndex: =2
+
+                        Button15 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderThickness: =4
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =Parent.TemplateHeight
+                            HoverBorderColor: =RGBA(14, 240, 228, 1)
+                            HoverFill: =
+                            OnSelect: =Select(Parent)
+                            Text: =
+                            Width: =Parent.TemplateWidth
+                            ZIndex: =3
+
+                        Label19 As label:
+                            Align: =Align.Center
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(255, 255, 255, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =60
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            Text: =ThisItem.Titulo_Stream
+                            Width: =Parent.TemplateWidth
+                            Y: =190
+                            ZIndex: =4
+
+                        Button3_12 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderThickness: =4
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: |
+                                =Parent.TemplateHeight
+                            HoverBorderColor: =RGBA(0, 247, 255, 1)
+                            HoverFill: =
+                            OnSelect: =Set(varVideoST,true);Set(varVideo3,Gallery12.Selected.Video_Stream)
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Text: =""
+                            Width: =Parent.TemplateWidth
+                            ZIndex: =5
+
+    Menu_lateral As groupContainer.manualLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =80
+        ZIndex: =3
+
+        MainContainer5_1 As groupContainer.verticalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width-2
+            ZIndex: =1
+
+            Container24 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =60
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =48
+                LayoutMode: =LayoutMode.Auto
+                Width: =48
+                ZIndex: =8
+
+                Image29 As image:
+                    BorderStyle: =BorderStyle.None
+                    Height: =60
+                    Image: ='1 (2)'
+                    LayoutMinWidth: =Parent.Width
+                    OnSelect: =Set(varAdd,false)
+                    PaddingBottom: =8
+                    PaddingLeft: =16
+                    PaddingRight: =8
+                    PaddingTop: =16
+                    TabIndex: =0
+                    Width: =80
+                    ZIndex: =1
+
+            Container24_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =16
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =48
+                LayoutMinWidth: =48
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =48
+                ZIndex: =9
+
+                Icon8_7 As icon.Help:
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(0, 217, 255, 1)
+                    FocusedBorderThickness: =0
+                    Height: =40
+                    HoverColor: =RGBA(255, 255, 0, 1)
+                    Icon: =Icon.BackArrow
+                    LayoutMinHeight: |
+                        =48
+                    LayoutMinWidth: =48
+                    OnSelect: =Set(varAdd,false);Back()
+                    PaddingLeft: =8
+                    PaddingRight: =8
+                    Width: =40
+                    ZIndex: =1
+
+                Icon8_2 As icon.Help:
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(0, 217, 255, 1)
+                    FocusedBorderThickness: =0
+                    Height: =40
+                    HoverColor: =RGBA(255, 255, 0, 1)
+                    Icon: =Icon.Home
+                    LayoutMinHeight: |
+                        =48
+                    LayoutMinWidth: =48
+                    OnSelect: =Navigate('Inicio-NV',ScreenTransition.Fade)
+                    PaddingBottom: =4
+                    PaddingLeft: =8
+                    PaddingRight: =8
+                    PaddingTop: =4
+                    Width: =40
+                    ZIndex: =2
+
+                Icon8_3 As icon.Help:
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(0, 217, 255, 1)
+                    FocusedBorderThickness: =0
+                    Height: =40
+                    HoverColor: =RGBA(255, 255, 0, 1)
+                    Icon: =Icon.Add
+                    LayoutMinHeight: |
+                        =48
+                    LayoutMinWidth: =48
+                    OnSelect: =Set(varAdd,true)
+                    PaddingBottom: =4
+                    PaddingLeft: =8
+                    PaddingRight: =8
+                    PaddingTop: =4
+                    Visible: =true//If( LookUp(BD_Industrial_training_Login;Email = User().Email;Tipo_acesso) = "Administrador" || "Gestor" ;  true ; false )
+                    Width: =40
+                    ZIndex: =3
+
+                Icon8_4 As icon.Help:
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(0, 217, 255, 1)
+                    FocusedBorderThickness: =0
+                    Height: =40
+                    HoverColor: =RGBA(255, 255, 0, 1)
+                    Icon: =Icon.Search
+                    LayoutMinHeight: |
+                        =48
+                    LayoutMinWidth: =48
+                    OnSelect: =If( varSearch = true, Set(varSearch,false) ,Set(varSearch,true))
+                    PaddingBottom: =4
+                    PaddingLeft: =8
+                    PaddingRight: =8
+                    PaddingTop: =4
+                    Width: =40
+                    ZIndex: =4
+
+    Adcionar_Stream As groupContainer.manualLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        DropShadow: =DropShadow.None
+        Height: =Parent.Height
+        Visible: =varAdd
+        Width: =Parent.Width - Menu_lateral.Width
+        X: =Menu_lateral.Width
+        ZIndex: =4
+
+        Image15 As image:
+            BorderStyle: =BorderStyle.None
+            Height: =Parent.Height
+            Image: =BGStream
+            ImagePosition: =ImagePosition.Fill
+            Width: =Parent.Width
+            ZIndex: =1
+
+        Container36 As groupContainer.horizontalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =3
+
+            Container49 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =80
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                ZIndex: =1
+
+                Button17_2 As button:
+                    BorderColor: =RGBA(12, 157, 201, 1)
+                    Color: =RGBA(180, 214, 250, 1)
+                    Fill: =RGBA(12, 59, 94, 1)
+                    FontWeight: =FontWeight.Normal
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 247, 255, 1)
+                    HoverFill: =
+                    OnSelect: =Set(varFormMode,FormMode.New);Set(varTextcomp,"Novo")
+                    PaddingLeft: =
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Size: =10
+                    Text: ="+ Novo video"
+                    Visible: =If( varTipo = "Videos",true)
+                    Width: =200
+                    X: =Parent.Width - Button17_2.Width - 30
+                    Y: =40
+                    ZIndex: =4
+
+                Group12_1 As group:
+                    Height: =5
+                    Width: =5
+                    X: =40
+                    Y: =10
+                    ZIndex: =4
+
+                    Image7_1 As image:
+                        Height: =76
+                        Image: ='1 (2)'
+                        Width: =23
+                        X: =245
+                        Y: =4
+                        ZIndex: =1
+
+                    Label15_4 As label:
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(255, 255, 255, 1)
+                        Font: ="Montserrat"
+                        Height: =76
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =18
+                        Text: ="Industry"
+                        Width: =111
+                        X: =12
+                        Y: =4
+                        ZIndex: =2
+
+                    Label15_5 As label:
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(255, 255, 255, 1)
+                        Font: ="Montserrat"
+                        FontWeight: =FontWeight.Bold
+                        Height: =76
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =18
+                        Text: ="streaming"
+                        Width: =131
+                        X: =114
+                        Y: =4
+                        ZIndex: =3
+
+                Label18 As label:
+                    Color: =RGBA(180, 214, 250, 1)
+                    Text: =varTextcomp
+                    Visible: =false
+                    X: =391
+                    ZIndex: =5
+
+                Button17_3 As button:
+                    BorderColor: =RGBA(12, 157, 201, 1)
+                    Color: =RGBA(180, 214, 250, 1)
+                    Fill: =RGBA(12, 59, 94, 1)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Normal
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 247, 255, 1)
+                    HoverFill: =
+                    OnSelect: =Set(varFormMode,FormMode.New);Set(varTextcomp,"Novo")
+                    PaddingLeft: =
+                    RadiusBottomLeft: =2
+                    RadiusBottomRight: =2
+                    RadiusTopLeft: =2
+                    RadiusTopRight: =2
+                    Size: =10
+                    Text: ="+ Novo banner"
+                    Visible: =If( varTipo = "Banner",true)
+                    Width: =200
+                    X: =Parent.Width - Button17_3.Width - 30
+                    Y: =41
+                    ZIndex: =6
+
+            "TabList1 As 'Lista de guias'.pcfdataset":
+                DisplayMode: =DisplayMode.Edit
+                Font: =Font.'Segoe UI'
+                FontColor: =RGBA(255, 255, 255, 1)
+                FontSize: |
+                    =18
+                FontWeight: =FontWeight.Normal
+                Height: =60
+                Items: =["Banner", "Videos"]
+                LayoutMinHeight: =55
+                LayoutMinWidth: =280
+                OnSelect: =Set(varTipo,TabList1.Selected.Value);Set(varTextcomp,varTipo);Set(varFormMode,FormMode.New);Set(varTextcomp,"Novo")
+                Width: =280
+                X: =0
+                Y: =50
+                ZIndex: =2
+
+                Value1 As PowerApps_CoreControls_TabListTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Value"
+                    FieldName: ="Value"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =10
+
+            Container48 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: |
+                    =Parent.Height- Container49_1.Height - Container49.Height - TabList1.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutGap: =16
+                LayoutMinHeight: =100
+                LayoutMinWidth: =Parent.Width - 110
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                ZIndex: =3
+
+                Container2 As groupContainer.manualLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Width: =Parent.Width /2 -60
+                    ZIndex: =1
+
+                    Gallery13 As gallery.galleryVertical:
+                        BorderStyle: =BorderStyle.None
+                        DelayItemLoading: =true
+                        Height: =Parent.Height - 60
+                        Items: =Filter(BD_Ind_Stream, Tipo_Strem = varTipo)
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplateSize: =126
+                        Width: |
+                            =Parent.Width - 16
+                        Y: =50
+                        ZIndex: =1
+
+                        Container54 As groupContainer.manualLayoutContainer:
+                            BorderStyle: =BorderStyle.None
+                            DropShadow: =DropShadow.Bold
+                            Height: =Button3_4.Height
+                            Width: =Button3_4.Width
+                            X: =Button3_4.X
+                            Y: =Button3_4.Y
+                            ZIndex: =1
+
+                        Button3_4 As button:
+                            BorderColor: =
+                            BorderStyle: =BorderStyle.None
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(31, 104, 163, 0.2)
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =Parent.TemplateHeight - 16
+                            HoverFill: =
+                            OnSelect: =Select(Parent)
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Text: =""
+                            Width: =Parent.Width - 30
+                            X: =8
+                            Y: =8
+                            ZIndex: =2
+
+                        Image16 As image:
+                            BorderStyle: =BorderStyle.None
+                            Height: =80
+                            Image: =ThisItem.Imagem_Banner
+                            ImagePosition: =ImagePosition.Fill
+                            OnSelect: =Select(Parent)
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =137
+                            X: =23
+                            Y: =23
+                            ZIndex: =3
+
+                        Label10 As label:
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(255, 255, 255, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            OnSelect: =Select(Parent)
+                            Size: =12
+                            Text: =ThisItem.Titulo_Stream
+                            Width: =325
+                            X: =184
+                            Y: =13
+                            ZIndex: =4
+
+                        Label10_2 As label:
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(180, 214, 250, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =60
+                            OnSelect: =Select(Parent)
+                            Size: =10
+                            Text: =ThisItem.Comentario_Stream
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: |
+                                =Parent.Width - 300
+                            X: =184
+                            Y: =43
+                            ZIndex: =5
+
+                        Button3_10 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =Parent.TemplateHeight - 16
+                            HoverBorderColor: =RGBA(0, 247, 255, 1)
+                            HoverFill: =
+                            OnSelect: =Set(varFormMode,FormMode.Edit)
+                            PressedBorderColor: =RGBA(255, 191, 0, 1)
+                            PressedFill: =
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Size: =12
+                            Text: =""
+                            Width: =Parent.Width - 30
+                            X: =8
+                            Y: =8
+                            ZIndex: =6
+
+                        Icon14 As icon.ChevronRight:
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(40, 134, 222, 1)
+                            Height: =40
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            Icon: =Icon.ChevronRight
+                            OnSelect: =Set(varFormMode,FormMode.Edit)
+                            PaddingBottom: =6
+                            PaddingTop: =6
+                            Width: =40
+                            X: =Button3_4.Width - Icon15.Width
+                            Y: =63
+                            ZIndex: =7
+
+                        Icon15 As icon.Trash:
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(15, 108, 189, 1)
+                            Height: =40
+                            HoverColor: =RGBA(240, 98, 15, 1)
+                            Icon: =Icon.Trash
+                            OnSelect: =Remove(BD_Ind_Stream,Gallery13.Selected)
+                            PaddingBottom: =8
+                            PaddingTop: =8
+                            Width: =40
+                            X: =Button3_4.Width - Icon15.Width
+                            Y: =13
+                            ZIndex: =8
+
+                    Label16_2 As label:
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(95, 211, 250, 0.78)
+                        DisabledColor: =RGBA(95, 211, 250, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.'Segoe UI'
+                        Size: =11
+                        Text: ="Selecione um " & varTipo & " para editar"
+                        Width: =600
+                        ZIndex: =2
+
+                    Label16_3 As label:
+                        Align: =Align.Right
+                        Color: =RGBA(180, 214, 250, 1)
+                        DisabledColor: =RGBA(82, 165, 242, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.'Segoe UI'
+                        Size: =10
+                        Text: |-
+                            ="Total de itens : " &CountRows(Gallery13.AllItems)
+                        Width: =200
+                        X: =Parent.Width - Label16_3.Width - 40
+                        Y: =10
+                        ZIndex: =3
+
+                Container52 As groupContainer.manualLayoutContainer:
+                    BorderColor: =RGBA(0, 217, 255, 1)
+                    BorderThickness: =1
+                    DropShadow: =DropShadow.Bold
+                    FillPortions: =0
+                    Height: |
+                        =Parent.Height
+                    LayoutMinHeight: |+
+                        =Parent.Height/2
+                        
+                        
+                    LayoutMinWidth: =Parent.Width /2.5
+                    Width: =Parent.Width /2
+                    ZIndex: =2
+
+                    Image18 As image:
+                        BorderColor: =RGBA(180, 214, 250, 1)
+                        BorderStyle: =BorderStyle.None
+                        FlipVertical: =true
+                        Height: =Parent.Height
+                        Image: ='999'
+                        ImagePosition: =ImagePosition.Center
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                    Form1_Banner As form:
+                        BorderStyle: =BorderStyle.None
+                        DataSource: =BD_Ind_Stream
+                        DefaultMode: =varFormMode
+                        Height: =Parent.Height /1.3
+                        Item: =Gallery13.Selected
+                        OnSuccess: =ResetForm(Form1_Banner);Refresh(BD_Ind_Stream)
+                        Visible: =If(varTipo="Banner",true,false)
+                        Width: =Parent.Width
+                        Y: =50
+                        ZIndex: =2
+
+                        Titulo_Stream_DataCard1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="Titulo_Stream"
+                            Default: =ThisItem.Titulo_Stream
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Titulo_Stream)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =76
+                            MaxLength: =DataSourceInfo([@BD_Ind_Stream], DataSourceInfo.MaxLength, Titulo_Stream)
+                            Required: =false
+                            Update: =DataCardValue6.Text
+                            Width: =472
+                            WidthFit: =true
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                            DataCardKey7 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =34
+                                Size: =12
+                                Text: ="Titulo do banner"
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue6 As text:
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Font: =Font.'Segoe UI'
+                                Height: =30
+                                HoverBorderColor: =RGBA(40, 134, 222, 1)
+                                HoverFill: =RGBA(255, 255, 255, 1)
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Size: =10
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage7 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue6.Y + DataCardValue6.Height
+                                ZIndex: =3
+
+                            StarVisible7 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey7.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey7.Y
+                                ZIndex: =4
+
+                        Filial_Stream_DataCard1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Filial_Stream"
+                            Default: =ThisItem.Filial_Stream
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Filial_Stream)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =72
+                            MaxLength: =DataSourceInfo([@BD_Ind_Stream], DataSourceInfo.MaxLength, Filial_Stream)
+                            Required: =false
+                            Update: =DataCardValue8.Text
+                            Width: =236
+                            WidthFit: =true
+                            X: =2
+                            Y: =0
+                            ZIndex: =3
+
+                            DataCardKey9 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =34
+                                Size: =12
+                                Text: ="Filial do " &varTipo
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue8 As text:
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Font: =Font.'Segoe UI'
+                                Height: =30
+                                HoverBorderColor: =RGBA(40, 134, 222, 1)
+                                HoverFill: =RGBA(255, 255, 255, 1)
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Size: =10
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage9 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue8.Y + DataCardValue8.Height
+                                ZIndex: =3
+
+                            StarVisible9 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey9.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey9.Y
+                                ZIndex: =4
+
+                        Comentario_Stream_DataCard1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="Comentario_Stream"
+                            Default: =ThisItem.Comentario_Stream
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Comentario_Stream)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =163
+                            MaxLength: =DataSourceInfo([@BD_Ind_Stream], DataSourceInfo.MaxLength, Comentario_Stream)
+                            Required: =false
+                            Update: =DataCardValue9.Text
+                            Width: =472
+                            WidthFit: =true
+                            X: =0
+                            Y: =1
+                            ZIndex: =3
+
+                            DataCardKey11 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =34
+                                Size: =12
+                                Text: ="Breve descrição"
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                ZIndex: =1
+
+                            DataCardValue9 As text:
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Font: =Font.'Segoe UI'
+                                Height: =100
+                                HoverBorderColor: =RGBA(40, 134, 222, 1)
+                                HoverFill: =RGBA(255, 255, 255, 1)
+                                MaxLength: =Parent.MaxLength
+                                Mode: =TextMode.MultiLine
+                                PaddingLeft: =10
+                                PaddingRight: =10
+                                PaddingTop: =10
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Size: =10
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey11.Y + DataCardKey11.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage11 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue9.Y + DataCardValue9.Height
+                                ZIndex: =3
+
+                            StarVisible11 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey11.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey11.Y
+                                ZIndex: =4
+
+                        Imagem_Banner_DataCard1 As typedDataCard.addLargePictureCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="Imagem_Banner"
+                            Default: =ThisItem.Imagem_Banner
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Imagem_Banner)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Image17.Image
+                            Width: =236
+                            WidthFit: =true
+                            X: =2
+                            Y: =1
+                            ZIndex: =3
+
+                            DataCardKey5 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =34
+                                Size: =12
+                                Text: ="Imagem do banner"
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                ZIndex: =1
+
+                            Image17 As image:
+                                BorderColor: =RGBA(180, 214, 250, 1)
+                                BorderThickness: =2
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =AddPicture1.Height
+                                Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                                ImagePosition: =ImagePosition.Fill
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Tooltip: =Parent.DisplayName
+                                Width: =AddPicture1.Width
+                                X: =AddPicture1.X
+                                Y: =AddPicture1.Y
+                                ZIndex: =2
+
+                            AddPicture1 As addMedia:
+                                Font: =Font.'Segoe UI'
+                                Height: =100
+                                Size: =10
+                                Text: ="Adicionar uma imagem"
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                                ZIndex: =3
+
+                            ErrorMessage5 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =Image17.Y + Image17.Height
+                                ZIndex: =4
+
+                            StarVisible5 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey5.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey5.Y
+                                ZIndex: =5
+
+                        Anexos_DataCard1 As typedDataCard.attachmentsEditCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="{Attachments}"
+                            Default: =ThisItem.Anexos
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Anexos)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =123
+                            Required: =false
+                            Update: =DataCardValue11.Attachments
+                            Visible: =true
+                            Width: =759
+                            X: =0
+                            Y: =2
+                            ZIndex: =3
+
+                            DataCardKey12 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =34
+                                Size: =12
+                                Text: ="Anexo"
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                ZIndex: =1
+
+                            DataCardValue11 As attachments:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                BorderStyle: =BorderStyle.None
+                                DisplayMode: =Parent.DisplayMode
+                                Font: =Font.'Segoe UI'
+                                Height: =76
+                                IsInDataCard: =true
+                                Items: =Parent.Default
+                                PaddingBottom: =5
+                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                Size: =9
+                                Tooltip: =Parent.DisplayName
+                                Width: |
+                                    =450
+                                X: =30
+                                Y: =DataCardKey12.Y + DataCardKey12.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage12 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue11.Y + DataCardValue11.Height
+                                ZIndex: =3
+
+                            StarVisible12 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey12.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey12.Y
+                                ZIndex: =4
+
+                        Video_Stream_DataCard1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Video_Stream"
+                            Default: =ThisItem.Video_Stream
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Video_Stream)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            MaxLength: =DataSourceInfo([@BD_Ind_Stream], DataSourceInfo.MaxLength, Video_Stream)
+                            Required: =false
+                            Update: =DataCardValue7.Text
+                            Visible: =false
+                            Width: =241
+                            X: =0
+                            Y: =3
+                            ZIndex: =3
+
+                            DataCardKey8 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue7 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage8 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue7.Y + DataCardValue7.Height
+                                ZIndex: =3
+
+                            StarVisible8 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey8.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey8.Y
+                                ZIndex: =4
+
+                        Tipo_Strem_DataCard1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="Tipo_Strem"
+                            Default: =ThisItem.Tipo_Strem
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Tipo_Strem)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            MaxLength: =DataSourceInfo([@BD_Ind_Stream], DataSourceInfo.MaxLength, Tipo_Strem)
+                            Required: =false
+                            Update: =DataCardValue5.Text
+                            Visible: =false
+                            Width: =241
+                            X: =1
+                            Y: =3
+                            ZIndex: =3
+
+                            DataCardKey6 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue5 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =varTipo
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage6 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue5.Y + DataCardValue5.Height
+                                ZIndex: =3
+
+                            StarVisible6 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey6.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey6.Y
+                                ZIndex: =4
+
+                    Button_Banner As button:
+                        BorderColor: =RGBA(12, 157, 201, 0.29)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Fill: =RGBA(12, 59, 94, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =30
+                        HoverBorderColor: =RGBA(0, 247, 255, 1)
+                        HoverFill: =
+                        OnSelect: =SubmitForm(Form1_Banner)
+                        PaddingLeft: =
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Size: =10
+                        Text: ="Salvar"
+                        X: =337
+                        Y: |
+                            =Parent.Height - 60
+                        ZIndex: =3
+
+                    Form1_Videos As form:
+                        BorderStyle: =BorderStyle.None
+                        DataSource: =BD_Ind_Stream
+                        DefaultMode: =varFormMode
+                        Height: =Form1_Banner.Height
+                        Item: =Gallery13.Selected
+                        OnSuccess: |-
+                            =Patch(BD_Ind_Stream, LookUp(BD_Ind_Stream, ID = Form1_Videos.LastSubmit.ID), {Video_Stream: Last(Form1_Videos.LastSubmit.Anexos).AbsoluteUri});NewForm(Form1_Videos);Refresh(BD_Ind_Stream);Notify("Video adicionado com sucesso")
+                        Visible: =If(varTipo="Videos",true,false)
+                        Width: =Parent.Width -50
+                        X: =Form1_Banner.X
+                        Y: =Form1_Banner.Y
+                        ZIndex: =4
+
+                        Titulo_Stream_DataCard1_1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="Titulo_Stream"
+                            Default: =ThisItem.Titulo_Stream
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Titulo_Stream)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =75
+                            MaxLength: =DataSourceInfo([@BD_Ind_Stream], DataSourceInfo.MaxLength, Titulo_Stream)
+                            Required: =false
+                            Update: =DataCardValue6_1.Text
+                            Width: =472
+                            WidthFit: =false
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                            DataCardKey7_1 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Height: =34
+                                Size: =11
+                                Text: ="Titulo do video"
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                ZIndex: =1
+
+                            DataCardValue6_1 As text:
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                BorderStyle: =BorderStyle.None
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =30
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Size: =11
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey7_1.Y + DataCardKey7_1.Height + 5
+                                ZIndex: =2
+
+                            StarVisible7_1 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey7_1.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey7_1.Y
+                                ZIndex: =4
+
+                        Filial_Stream_DataCard1_1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="Filial_Stream"
+                            Default: =ThisItem.Filial_Stream
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Filial_Stream)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =74
+                            MaxLength: =DataSourceInfo([@BD_Ind_Stream], DataSourceInfo.MaxLength, Filial_Stream)
+                            Required: =false
+                            Update: =DataCardValue8_1.Text
+                            Visible: =true
+                            Width: =236
+                            WidthFit: =false
+                            X: =2
+                            Y: =0
+                            ZIndex: =3
+
+                            DataCardKey9_2 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Height: =34
+                                Size: =11
+                                Text: ="Filial do video"
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                ZIndex: =1
+
+                            DataCardValue8_1 As text:
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                BorderStyle: =BorderStyle.None
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =30
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Size: =11
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey9_2.Y + DataCardKey9_2.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage9_2 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue8_1.Y + DataCardValue8_1.Height
+                                ZIndex: =3
+
+                            StarVisible9_2 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey9_2.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey9_2.Y
+                                ZIndex: =4
+
+                        Tipo_Strem_DataCard1_1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="Tipo_Strem"
+                            Default: =ThisItem.Tipo_Strem
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Tipo_Strem)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            MaxLength: =DataSourceInfo([@BD_Ind_Stream], DataSourceInfo.MaxLength, Tipo_Strem)
+                            Required: =false
+                            Update: =DataCardValue5_1.Text
+                            Visible: =false
+                            Width: =241
+                            X: =0
+                            Y: =1
+                            ZIndex: =3
+
+                            DataCardKey6_1 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue5_1 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =varTipo
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey6_1.Y + DataCardKey6_1.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage6_1 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue5_1.Y + DataCardValue5_1.Height
+                                ZIndex: =3
+
+                            StarVisible6_1 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey6_1.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey6_1.Y
+                                ZIndex: =4
+
+                        Comentario_Stream_DataCard1_1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="Comentario_Stream"
+                            Default: =ThisItem.Comentario_Stream
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Comentario_Stream)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =107
+                            MaxLength: =DataSourceInfo([@BD_Ind_Stream], DataSourceInfo.MaxLength, Comentario_Stream)
+                            Required: =false
+                            Update: =DataCardValue9_2.Text
+                            Width: =723
+                            WidthFit: =true
+                            X: =0
+                            Y: =2
+                            ZIndex: =3
+
+                            DataCardKey11_2 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Height: =34
+                                Size: =11
+                                Text: ="Breve descrição"
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                ZIndex: =1
+
+                            DataCardValue9_2 As text:
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                BorderStyle: =BorderStyle.None
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =60
+                                MaxLength: =Parent.MaxLength
+                                Mode: =TextMode.MultiLine
+                                PaddingLeft: =10
+                                PaddingRight: =10
+                                PaddingTop: =10
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Size: =11
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey11_2.Y + DataCardKey11_2.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage11_2 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue9_2.Y + DataCardValue9_2.Height
+                                ZIndex: =3
+
+                            StarVisible11_2 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey11_2.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey11_2.Y
+                                ZIndex: =4
+
+                        Imagem_Banner_DataCard1_1 As typedDataCard.addLargePictureCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="Imagem_Banner"
+                            Default: =ThisItem.Imagem_Banner
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Imagem_Banner)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            Required: =false
+                            Update: =Image17_1.Image
+                            Width: =236
+                            WidthFit: =false
+                            X: =0
+                            Y: =3
+                            ZIndex: =3
+
+                            DataCardKey5_1 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Height: =34
+                                Size: =11
+                                Text: =If(varTipo<>"Banner","Capa do video", "Imagem do banner")
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                ZIndex: =1
+
+                            Image17_1 As image:
+                                BorderColor: =RGBA(180, 214, 250, 1)
+                                BorderThickness: =2
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =AddPicture1_1.Height
+                                Image: =If(IsBlank(AddPicture1_1.Media), Parent.Default, AddPicture1_1.Media)
+                                ImagePosition: =ImagePosition.Fill
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Tooltip: =Parent.DisplayName
+                                Width: =129
+                                X: =33
+                                Y: =AddPicture1_1.Y
+                                ZIndex: =2
+
+                            AddPicture1_1 As addMedia:
+                                Height: =155
+                                Size: =9
+                                Text: ="Adicionar uma imagem"
+                                Width: =129
+                                X: =33
+                                Y: =DataCardKey5_1.Y + DataCardKey5_1.Height + 5
+                                ZIndex: =3
+
+                            ErrorMessage5_1 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =Image17_1.Y + Image17_1.Height
+                                ZIndex: =4
+
+                            StarVisible5_1 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey5_1.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey5_1.Y
+                                ZIndex: =5
+
+                        Anexos_DataCard1_1 As typedDataCard.attachmentsEditCard:
+                            BorderStyle: =BorderStyle.None
+                            DataField: ="{Attachments}"
+                            Default: =ThisItem.Anexos
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Anexos)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =154
+                            Required: =false
+                            Update: =DataCardValue11_2.Attachments
+                            Visible: =true
+                            Width: =236
+                            WidthFit: =false
+                            X: =1
+                            Y: =3
+                            ZIndex: =3
+
+                            DataCardKey12_2 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Height: =34
+                                Size: =11
+                                Text: ="Anexo"
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                ZIndex: =1
+
+                            DataCardValue11_2 As attachments:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(122, 138, 143, 1)
+                                DisplayMode: =Parent.DisplayMode
+                                Height: =148
+                                IsInDataCard: =true
+                                Items: =Parent.Default
+                                MaxAttachments: =1
+                                MaxAttachmentSize: =300
+                                PaddingBottom: =5
+                                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                Size: =10
+                                Tooltip: =Parent.DisplayName
+                                Width: =190
+                                X: =30
+                                Y: =DataCardKey12_2.Y + DataCardKey12_2.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage12_2 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue11_2.Y + DataCardValue11_2.Height
+                                ZIndex: =3
+
+                            StarVisible12_2 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey12_2.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey12_2.Y
+                                ZIndex: =4
+
+                        Video_Stream_DataCard1_1 As typedDataCard.textualEditCard:
+                            BorderStyle: =BorderStyle.Solid
+                            DataField: ="Video_Stream"
+                            Default: =ThisItem.Video_Stream
+                            DisplayMode: =Parent.DisplayMode
+                            DisplayName: =DataSourceInfo([@BD_Ind_Stream],DataSourceInfo.DisplayName,Video_Stream)
+                            Fill: =RGBA(0, 0, 0, 0)
+                            Height: =50
+                            MaxLength: =DataSourceInfo([@BD_Ind_Stream], DataSourceInfo.MaxLength, Video_Stream)
+                            Required: =false
+                            Update: =DataCardValue7_1.Text
+                            Visible: =false
+                            Width: =241
+                            X: =2
+                            Y: =3
+                            ZIndex: =3
+
+                            DataCardKey8_1 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(180, 214, 250, 1)
+                                Height: =34
+                                Text: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                Wrap: =false
+                                X: =30
+                                Y: =10
+                                ZIndex: =1
+
+                            DataCardValue7_1 As text:
+                                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                Default: =Parent.Default
+                                DelayOutput: =true
+                                DisplayMode: =Parent.DisplayMode
+                                MaxLength: =Parent.MaxLength
+                                PaddingLeft: =5
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                Tooltip: =Parent.DisplayName
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardKey8_1.Y + DataCardKey8_1.Height + 5
+                                ZIndex: =2
+
+                            ErrorMessage8_1 As label:
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(168, 0, 0, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =10
+                                Live: =Live.Assertive
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =14
+                                Text: =Parent.Error
+                                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                Width: =Parent.Width - 60
+                                X: =30
+                                Y: =DataCardValue7_1.Y + DataCardValue7_1.Height
+                                ZIndex: =3
+
+                            StarVisible8_1 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                Height: =DataCardKey8_1.Height
+                                Text: ="*"
+                                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                Width: =30
+                                Wrap: =false
+                                Y: =DataCardKey8_1.Y
+                                ZIndex: =4
+
+                    Button_Video As button:
+                        BorderColor: =RGBA(12, 157, 201, 1)
+                        Color: =RGBA(180, 214, 250, 1)
+                        Fill: =RGBA(12, 59, 94, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =35
+                        HoverBorderColor: =RGBA(0, 247, 255, 1)
+                        HoverFill: =
+                        OnSelect: =SubmitForm(Form1_Videos)
+                        PaddingLeft: =
+                        RadiusBottomLeft: =2
+                        RadiusBottomRight: =2
+                        RadiusTopLeft: =2
+                        RadiusTopRight: =2
+                        Size: =10
+                        Text: ="Salvar"
+                        Tooltip: ="Salvar video"
+                        Visible: =If( varTipo = "Videos", true,false)
+                        X: =337
+                        Y: =502
+                        ZIndex: =5
+
+                    Label16 As label:
+                        Color: =RGBA(95, 211, 250, 1)
+                        DisabledColor: =RGBA(71, 219, 245, 0.7)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.'Segoe UI'
+                        PaddingLeft: =25
+                        Size: =11
+                        Text: |-
+                            ="Editar / Adcionar : " & varTipo
+                            
+                            /*Set(
+                                
+                                    varTextcomp = "Banner";
+                                    "Editar Banner"
+                                );
+                                
+                                    varTextcomp = "Videos";
+                                    "Editar Video"
+                                );
+                                
+                                    varTextcomp = "Novo";
+                                    "Adicionar novo video"
+                                )
+                            )*/
+                        Width: =Parent.Width
+                        ZIndex: =6
+
+            Container49_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =15
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                ZIndex: =4
+
+    "'Video Stream_1' As 'Video Stream'":
+        Visible: =varVideoST
+        X: =Menu_lateral.Width
+        ZIndex: =5
+

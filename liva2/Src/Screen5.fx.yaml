@@ -1,0 +1,544 @@
+"Screen5 As screen.'autoLayout_HeaderFooter_ver1.0'":
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+    ImagePosition: =ImagePosition.Fill
+
+    Container6 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(18, 50, 77, 1)
+        Height: =660
+        Width: =Parent.Width / 1.1
+        X: =(Parent.Width - Container6.Width)/2
+        Y: =(Parent.Height - Container6.Height)/2
+        ZIndex: =3
+
+        Container17 As groupContainer.horizontalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            Height: =660
+            LayoutGap: =16
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Width: =Parent.Width
+            ZIndex: =1
+
+        Container44 As groupContainer.verticalAutoLayoutContainer:
+            BorderStyle: =BorderStyle.None
+            Height: |
+                =Parent.Height
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            X: =
+            ZIndex: =2
+
+            Container45 As groupContainer.horizontalAutoLayoutContainer:
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                Container46 As groupContainer.manualLayoutContainer:
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    ZIndex: =1
+
+                    "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                        DelayItemLoading: =true
+                        Height: =549
+                        Items: =Distinct(BD_Ind_train_Bib,Curso)
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =0
+                        TemplateSize: =104
+                        Visible: =false
+                        Width: =Parent.Width - 40
+                        X: =20
+                        Y: =85
+                        ZIndex: =1
+
+                        Image27 As image:
+                            Height: =72
+                            Image: =LookUp(BD_Ind_train_Bib,Curso = Title3.Text,Capa)
+                            ImagePosition: =ImagePosition.Fill
+                            OnSelect: =Select(Parent)
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Width: =72
+                            X: =16
+                            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                            ZIndex: =1
+
+                        Title3 As label:
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(50, 49, 48, 1)
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =Self.Size * 1.8
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: =ThisItem.Value
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - 173
+                            X: =111
+                            Y: =39
+                            ZIndex: =2
+
+                        NextArrow2 As icon.ChevronRight:
+                            AccessibleLabel: =Self.Tooltip
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(166, 166, 166, 1)
+                            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                            DisabledColor: =RGBA(119, 119, 119, 1)
+                            Height: =50
+                            Icon: =Icon.ChevronRight
+                            OnSelect: =Set(varTrilha2,Title3.Text)
+                            PaddingBottom: =16
+                            PaddingLeft: =16
+                            PaddingRight: =16
+                            PaddingTop: =16
+                            Tooltip: ="Exibir detalhes do item"
+                            Width: =50
+                            X: =Parent.TemplateWidth - Self.Width - 12
+                            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                            ZIndex: =4
+
+                    TextInput4 As text:
+                        BorderStyle: =BorderStyle.None
+                        Default: =
+                        Height: =50
+                        PaddingTop: =8
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: |
+                            =Parent.Width -40
+                        X: =20
+                        Y: =21
+                        ZIndex: =2
+
+                    "Gallery11 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                        DelayItemLoading: =true
+                        Height: =549
+                        Items: =Gallery6.AllItems
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =0
+                        TemplateSize: =104
+                        Width: =Parent.Width - 40
+                        X: =20
+                        Y: =85
+                        ZIndex: =3
+
+                        Button3_6 As button:
+                            BorderColor: =
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(31, 104, 163, 0.2)
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =88
+                            HoverFill: =
+                            OnSelect: =Select(Parent)
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Text: =""
+                            Width: =663
+                            X: =7
+                            Y: =7
+                            ZIndex: =1
+
+                        Image28 As image:
+                            Height: =72
+                            Image: =ThisItem.Image27.Image
+                            ImagePosition: =ImagePosition.Fill
+                            OnSelect: =Select(Parent)
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Width: =72
+                            X: =16
+                            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                            ZIndex: =2
+
+                        Title4 As label:
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(50, 49, 48, 1)
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =Self.Size * 1.8
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: =ThisItem.Value
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - 173
+                            X: =103
+                            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle5.Size * 1.8)) / 2
+                            ZIndex: =3
+
+                        Subtitle5 As label:
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =Self.Size * 1.8
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =12
+                            Text: =ThisItem.Value
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Title4.Width
+                            X: =Title4.X
+                            Y: =Title4.Y + Title4.Height
+                            ZIndex: =4
+
+                        NextArrow4 As icon.ChevronRight:
+                            AccessibleLabel: =Self.Tooltip
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(166, 166, 166, 1)
+                            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                            DisabledColor: =RGBA(119, 119, 119, 1)
+                            Height: =50
+                            Icon: =Icon.ChevronRight
+                            OnSelect: =Set(varTrilha2,Title4.Text)
+                            PaddingBottom: =16
+                            PaddingLeft: =16
+                            PaddingRight: =16
+                            PaddingTop: =16
+                            Tooltip: ="Exibir detalhes do item"
+                            Width: =50
+                            X: =Parent.TemplateWidth - Self.Width - 12
+                            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                            ZIndex: =5
+
+                Button5 As button:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderStyle: =BorderStyle.None
+                    DisabledFill: =RGBA(40, 134, 222, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Height: =Parent.Height - 80
+                    Text: =
+                    Width: =2
+                    ZIndex: =2
+
+                Container46_1 As groupContainer.manualLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    DropShadow: =DropShadow.None
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    ZIndex: =3
+
+                    "Gallery6_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                        DelayItemLoading: =true
+                        Height: =547
+                        Items: =Filter(BD_Ind_train_Bib,Curso = varTrilha2)
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =0
+                        TemplateSize: =104
+                        Width: =682
+                        X: =21
+                        Y: =85
+                        ZIndex: =1
+
+                        Button3_7 As button:
+                            BorderColor: =
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(31, 104, 163, 0.2)
+                            DisplayMode: =DisplayMode.Disabled
+                            Height: =88
+                            HoverFill: =
+                            OnSelect: =Select(Parent)
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Text: =""
+                            Width: =663
+                            X: =7
+                            Y: =9
+                            ZIndex: =1
+
+                        Image27_1 As image:
+                            Height: =72
+                            Image: =ThisItem.Capa
+                            ImagePosition: =ImagePosition.Fill
+                            OnSelect: =Select(Parent)
+                            RadiusBottomLeft: =8
+                            RadiusBottomRight: =8
+                            RadiusTopLeft: =8
+                            RadiusTopRight: =8
+                            Width: =72
+                            X: =16
+                            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                            ZIndex: =2
+
+                        Title3_1 As label:
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(50, 49, 48, 1)
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =Self.Size * 1.8
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =14
+                            Text: =ThisItem.Título
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - 173
+                            X: =111
+                            Y: =35
+                            ZIndex: =3
+
+                        NextArrow2_1 As icon.ChevronRight:
+                            AccessibleLabel: =Self.Tooltip
+                            BorderColor: =RGBA(0, 0, 0, 1)
+                            Color: =RGBA(166, 166, 166, 1)
+                            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                            DisabledColor: =RGBA(119, 119, 119, 1)
+                            Height: =50
+                            Icon: =Icon.ChevronRight
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =16
+                            PaddingLeft: =16
+                            PaddingRight: =16
+                            PaddingTop: =16
+                            Tooltip: ="Exibir detalhes do item"
+                            Width: =50
+                            X: =Parent.TemplateWidth - Self.Width - 12
+                            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                            ZIndex: =4
+
+                        Button7 As button:
+                            BorderStyle: =BorderStyle.None
+                            Font: ="Montserrat"
+                            OnSelect: =Set(varCadprova,true)
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Size: =12
+                            Text: ="Cadastrar prova"
+                            X: =495
+                            Y: =37
+                            ZIndex: =5
+
+                    TextInput4_3 As text:
+                        BorderStyle: =BorderStyle.None
+                        Default: =
+                        Height: =50
+                        PaddingTop: =8
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: =Parent.Width -40
+                        X: =21
+                        Y: =21
+                        ZIndex: =2
+
+        Container47 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.ExtraBold
+            Fill: =RGBA(4, 60, 90, 0.69)
+            Height: |
+                =640
+            Width: =1412
+            X: =21
+            Y: =22
+            ZIndex: =3
+
+            Container22 As groupContainer.manualLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                DropShadow: =DropShadow.ExtraBold
+                Height: =640
+                Width: =1412
+                ZIndex: =1
+
+                Label7_6 As label:
+                    Fill: =RGBA(241, 244, 249, 0.64)
+                    Height: =253
+                    Text: =Concat(Gallery3_2.AllItems, Label7_3.Text, "$$")
+                    Visible: =false
+                    Width: =278
+                    X: =736
+                    Y: =236
+                    ZIndex: =1
+
+                Gallery3_2 As gallery.galleryVertical:
+                    BorderStyle: =BorderStyle.None
+                    DelayItemLoading: =true
+                    Height: =550
+                    Items: =Sequence(5)
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =499
+                    Width: =1001
+                    X: =206
+                    ZIndex: =2
+
+                    Button6 As button:
+                        BorderThickness: =1
+                        DisabledFill: =RGBA(224, 224, 224, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =488
+                        OnSelect: =Select(Parent)
+                        PaddingLeft: =8
+                        PaddingTop: =8
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Text: =
+                        Width: =Parent.Width - 50
+                        X: =9
+                        Y: =7
+                        ZIndex: =1
+
+                    Label7_3 As label:
+                        Fill: =RGBA(241, 244, 249, 0.64)
+                        Height: =253
+                        Text: =ThisItem.Value&"|"&TextInput5.Text&"|"&Concat(Gallery4.AllItems, TextInput5_1.Text, "|")&"|"&Radio2_1.Selected.Value
+                        Visible: =false
+                        Width: =378
+                        X: =353
+                        ZIndex: =2
+
+                    Gallery4 As gallery.galleryVertical:
+                        BorderStyle: =BorderStyle.None
+                        DelayItemLoading: =true
+                        Height: =326
+                        Items: =Sequence(Value(TextInput5_4.Text))
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplateSize: =50
+                        Width: |
+                            =Parent.Width - 60
+                        X: =16
+                        Y: =162
+                        ZIndex: =3
+
+                        TextInput5_1 As text:
+                            BorderStyle: =BorderStyle.None
+                            Default: =
+                            Fill: =RGBA(245, 245, 245, 1)
+                            HintText: ="Alternativa"
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =16
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: |
+                                =Parent.Width - Radio2_1.Width - 35
+                            X: =90
+                            Y: =5
+                            ZIndex: =2
+
+                    TextInput5 As text:
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =1
+                        Default: =
+                        Fill: =RGBA(245, 245, 245, 1)
+                        Height: =71
+                        HintText: ="Pergunta"
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        Mode: =TextMode.MultiLine
+                        OnSelect: =Select(Parent)
+                        PaddingLeft: =8
+                        PaddingTop: =8
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width - 70
+                        X: =19
+                        Y: =16
+                        ZIndex: =4
+
+                    Radio2_1 As radio:
+                        BorderColor: =RGBA(122, 138, 143, 1)
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(122, 138, 143, 1)
+                        Height: =326
+                        Items: =Sequence(Value(TextInput5_4.Text))
+                        LineHeight: =3
+                        OnSelect: =Select(Parent)
+                        RadioBorderColor: =RGBA(122, 138, 143, 1)
+                        Width: =85
+                        X: =15
+                        Y: =159
+                        ZIndex: =7
+
+                    Group1 As group:
+                        Height: =5
+                        Width: =5
+                        X: =40
+                        Y: =40
+                        ZIndex: =8
+
+                        Label5_2 As label:
+                            Color: =RGBA(106, 122, 127, 0.78)
+                            OnSelect: =Select(Parent)
+                            Size: =12
+                            Text: ="Quantas alternativas terão? Max ( 5 )"
+                            Width: =349
+                            X: =19
+                            Y: =105
+                            ZIndex: =5
+
+                        TextInput5_4 As text:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(139, 154, 159, 1)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =1
+                            Default: =
+                            Fill: =RGBA(240, 240, 240, 1)
+                            FocusedBorderThickness: =2
+                            FontWeight: =FontWeight.Semibold
+                            Format: =TextFormat.Number
+                            HoverBorderColor: =RGBA(214, 221, 224, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnChange: =If(!(Value(TextInput5_4.Text) in [2,3,4,5]),Notify("É permitido apenas 2 - 5 alternativas"))
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =5
+                            Size: =14
+                            Width: =57
+                            X: =311
+                            Y: =105
+                            ZIndex: =6
+
+                Button6_1 As button:
+                    BorderThickness: =1
+                    Fill: =RGBA(230, 170, 35, 1)
+                    OnSelect: |+
+                        =If(CountIf(Gallery3_2.AllItems, !(Value(TextInput5_4.Text) in [2,3,4,5])) > 0, Notify("É permitido apenas 2 - 5 alternativas"), 
+                        If(CountIf(Gallery3_2.AllItems, IsBlank(Radio2_1.Selected)) > 0, Notify("É necessário selecionar as alternativas corretas de todas as questões"),
+                        
+                        
+                        Patch(BD_ind_exam, {}, {Provas: Label7_6.Text})))
+                        
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Text: ="Salvar"
+                    X: =626
+                    Y: =572
+                    ZIndex: =3
+

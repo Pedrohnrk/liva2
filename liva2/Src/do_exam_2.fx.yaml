@@ -1,0 +1,138 @@
+do_exam_2 As screen:
+
+    Gallery3_3 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =749
+        Items: =Split(Last(BD_ind_exam).Provas, "$$")
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =508
+        Width: =897
+        ZIndex: =1
+
+        Gallery4_2 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =326
+            Items: |-
+                =Split(
+                    Substitute(
+                        Substitute(
+                            ThisItem.Value,
+                            Right(
+                                ThisItem.Value,
+                                Find(
+                                    "¨",
+                                    Substitute(
+                                        ThisItem.Value,
+                                        "|",
+                                        "¨",
+                                        1
+                                    ),
+                                    1
+                                )
+                            ),
+                            ""
+                        ),
+                        Left(
+                            ThisItem.Value,
+                            Find(
+                                "¨",
+                                Substitute(
+                                    ThisItem.Value,
+                                    "|",
+                                    "¨",
+                                    2
+                                ),
+                                1
+                            )
+                        ),
+                        ""
+                    ),
+                    "|"
+                )
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =43
+            Width: =525
+            Y: =164
+            ZIndex: =1
+
+            TextInput5_6 As text:
+                Default: =ThisItem.Value
+                Height: =43
+                HintText: ="Resposta"
+                Mode: =TextMode.MultiLine
+                OnSelect: =Select(Parent)
+                Width: =437
+                X: =78
+                ZIndex: =2
+
+        TextInput5_5 As text:
+            Default: =Mid(ThisItem.Value, 3,  Find("|",ThisItem.Value, 3)-3)
+            Height: =71
+            HintText: ="Pergunta"
+            Mode: =TextMode.MultiLine
+            OnChange: =
+            OnSelect: =Select(Parent)
+            Width: =458
+            X: =85
+            Y: =5
+            ZIndex: =2
+
+        Radio2_2 As radio:
+            Height: =326
+            Items: =Sequence(Value(Gallery4_2.AllItemsCount))
+            LineHeight: =2.6
+            OnSelect: =Select(Parent)
+            Width: =85
+            Y: =162
+            ZIndex: =5
+
+        Label8_2 As label:
+            Height: =230
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Value
+            Width: =301
+            X: =550
+            Y: =5
+            ZIndex: =6
+
+        Label9_2 As label:
+            Height: =71
+            OnSelect: =Select(Parent)
+            Text: =Left(ThisItem.Value, Find("|",ThisItem.Value, 1)-1)
+            Width: =85
+            Y: =5
+            ZIndex: =7
+
+        Label9_3 As label:
+            Height: =71
+            OnSelect: =Select(Parent)
+            Text: =Right(ThisItem.Value, Find("|",ThisItem.Value, 1)-1)
+            Width: =85
+            X: =585
+            Y: =164
+            ZIndex: =8
+
+        Label9_4 As label:
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =71
+            OnSelect: =Select(Parent)
+            Text: =IfError(If(Radio2_2.Selected.Value = Value(Label9_3.Text), 1, 0), "")
+            Width: =260
+            X: =585
+            Y: =289
+            ZIndex: =9
+
+    Label9_5 As label:
+        Align: =Align.Center
+        Fill: =RGBA(241, 244, 249, 1)
+        Height: =71
+        OnSelect: =
+        Text: =CountIf(Gallery3_3.AllItems, Text(Radio2_2.Selected.Value) = Right(ThisRecord.Value, Find("|",ThisRecord.Value, 1)-1))
+        Width: =260
+        X: =1156
+        Y: =200
+        ZIndex: =2
+

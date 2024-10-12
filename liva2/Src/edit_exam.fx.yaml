@@ -1,0 +1,332 @@
+edit_exam As screen:
+
+    Button6_6 As button:
+        BorderThickness: =1
+        Fill: =RGBA(230, 170, 35, 1)
+        OnSelect: |+
+            =Patch(BD_ind_exam, DataTable1.Selected, {Provas: Label8_6.Text});Notify("Prova salva com sucesso!", NotificationType.Success)
+            
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Text: ="Salvar"
+        X: =1320
+        Y: =597
+        ZIndex: =2
+
+    "Gallery6_5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderStyle: =BorderStyle.None
+        DelayItemLoading: =true
+        Height: =116
+        Items: =Filter(BD_Ind_train_Bib,Curso = "Operador de Moagem Básico")
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =425
+        X: =21
+        Y: =85
+        ZIndex: =3
+
+        Button3_13 As button:
+            BorderColor: =
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(31, 104, 163, 0.3)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =88
+            HoverFill: =
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Text: =""
+            Width: |
+                =Parent.Width - 20
+            X: =7
+            Y: =9
+            ZIndex: =1
+
+        Image27_4 As image:
+            Height: =72
+            Image: =ThisItem.Capa
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =72
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =2
+
+        NextArrow2_4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            DisabledColor: =RGBA(119, 119, 119, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="Exibir detalhes do item"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Button7_3 As button:
+            BorderStyle: =BorderStyle.None
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(127, 163, 83, 1)
+            DisplayMode: =If(Button7_3.Text = "Cadastrar prova", DisplayMode.Edit,DisplayMode.Disabled)
+            Fill: =RGBA(4, 60, 90, 1)
+            Font: ="Montserrat"
+            FontWeight: =FontWeight.Normal
+            Height: =35
+            HoverFill: =RGBA(60, 100, 125, 1)
+            OnSelect: =Set(varCadprova,true); ClearCollect(count_exam, Filter(BD_ind_exam, ID_Treinamento = Text(ThisItem.ID))); Set(count_qtd_exam, CountRows(count_exam));ClearCollect(qtd_questoes, Sequence(0));ClearCollect(qtd_questoes, Sequence(5))
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =12
+            Text: =If(Label8_1.Text = "true","Prova Cadastrada  ✔","Cadastrar prova")
+            Width: =180
+            X: =219
+            Y: =42
+            ZIndex: =4
+
+        Title3_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(180, 214, 250, 1)
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14
+            Text: =ThisItem.ID
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =false
+            Width: =Parent.TemplateWidth - 173
+            X: =111
+            Y: =35
+            ZIndex: =5
+
+        Label8_1 As label:
+            Text: =LookUp(BD_ind_exam,ID_Treinamento = Title3_4.Text, "true")
+            Visible: =false
+            X: =111
+            Y: =27
+            ZIndex: =6
+
+        Button14_1 As button:
+            Font: ="Montserrat"
+            FontWeight: =FontWeight.Normal
+            Height: =35
+            OnSelect: =Set(edit_exam_var, First(Filter(BD_ind_exam, ID_Treinamento = Text(Gallery6_5.Selected.ID))).Provas)
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =10
+            Text: ="Editar prova"
+            Visible: =If(Button7_3.Text = "Prova Cadastrada  ✔",true,false)
+            Width: =102
+            X: =111
+            Y: =42
+            ZIndex: =8
+
+    Gallery3_6 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =555
+        Items: =Split(DataTable1.Selected.Provas, "$$")
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =508
+        Width: =861
+        X: =739
+        ZIndex: =4
+
+        Gallery4_5 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =326
+            Items: |-
+                =Split(
+                    Substitute(
+                        Substitute(
+                            ThisItem.Value,
+                            Right(
+                                ThisItem.Value,
+                                Find(
+                                    "¨",
+                                    Substitute(
+                                        ThisItem.Value,
+                                        "|",
+                                        "¨",
+                                        1
+                                    ),
+                                    1
+                                )
+                            ),
+                            ""
+                        ),
+                        Left(
+                            ThisItem.Value,
+                            Find(
+                                "¨",
+                                Substitute(
+                                    ThisItem.Value,
+                                    "|",
+                                    "¨",
+                                    2
+                                ),
+                                1
+                            )
+                        ),
+                        ""
+                    ),
+                    "|"
+                )
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =43
+            Width: =525
+            Y: =164
+            ZIndex: =1
+
+            TextInput5_15 As text:
+                Default: =ThisItem.Value
+                Height: =43
+                HintText: ="Resposta"
+                Mode: =TextMode.MultiLine
+                OnSelect: =Select(Parent)
+                Width: =437
+                X: =78
+                ZIndex: =2
+
+        TextInput5_14 As text:
+            Default: =Mid(ThisItem.Value, 3,  Find("|",ThisItem.Value, 3)-3)
+            Height: =71
+            HintText: ="Pergunta"
+            Mode: =TextMode.MultiLine
+            OnChange: =
+            OnSelect: =Select(Parent)
+            Width: =458
+            X: =85
+            Y: =5
+            ZIndex: =2
+
+        Radio2_3 As radio:
+            Default: =Label9_13.Text
+            Height: =326
+            Items: =Sequence(Value(Gallery4_5.AllItemsCount))
+            LineHeight: =2.6
+            OnSelect: =Select(Parent)
+            Width: =85
+            Y: =162
+            ZIndex: =5
+
+        Label8_6 As label:
+            Height: =230
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Value
+            Width: =301
+            X: =550
+            Y: =5
+            ZIndex: =6
+
+        Label9_12 As label:
+            Height: =71
+            OnSelect: =Select(Parent)
+            Text: =Left(ThisItem.Value, Find("|",ThisItem.Value, 1)-1)
+            Width: =85
+            Y: =5
+            ZIndex: =7
+
+        Label9_13 As label:
+            Height: =71
+            OnSelect: =Select(Parent)
+            Text: =Right(ThisItem.Value, Find("|",ThisItem.Value, 1)-1)
+            Width: =85
+            X: =585
+            Y: =164
+            ZIndex: =8
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =500
+        Items: =BD_ind_exam
+        Width: =538
+        X: =0
+        Y: =268
+        ZIndex: =5
+
+        Título_Coluna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Título"
+            FieldName: ="Title"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.Título
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =10
+
+        ID_Treinamento_Coluna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="ID_Treinamento"
+            FieldName: ="ID_Treinamento"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.ID_Treinamento
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =11
+
+        Provas_Coluna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Provas"
+            FieldName: ="Provas"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Provas
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =12
+
+        id_prova_Coluna1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="id_prova"
+            FieldName: ="id_prova"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.id_prova
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =13
+
