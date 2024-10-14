@@ -19,7 +19,8 @@
       }
     },
     "dataSources": [
-      "BD_Centros_Agri_Foods_PH"
+      "BD_Centros_Agri_Foods_PH",
+      "BD_VCLO_COLAB"
     ],
     "dependencies": {},
     "dependents": [],
@@ -40,28 +41,6 @@
       "parameterHintsV2": {}
     },
     "datasets": {
-      "https://bungeltd.sharepoint.com/sites/controladoriadeoperacoes/controladoriaagribusiness/bdcontroladoria": {
-        "dataSources": {
-          "BD_Ind_Ans_Exam": {
-            "tableName": "02149c7b-8c62-4975-9b5a-d18197831cba"
-          },
-          "BD_ind_exam": {
-            "tableName": "9865b7bd-3204-4fa9-ab62-92efdf5b6e33"
-          },
-          "BD_Ind_Stream": {
-            "tableName": "7ad39be9-69a4-452d-9c1e-567540ad403f"
-          },
-          "BD_Ind_train_Bib": {
-            "tableName": "2ac751be-de90-4fd6-8af5-82f691a82e40"
-          },
-          "BD_Industrial_training_Login": {
-            "tableName": "3a9632b0-d5e1-4a9c-ac1f-f5fbd130729e"
-          },
-          "BD_linked_training": {
-            "tableName": "b36de0b4-67d2-4d9a-9454-383b8e0b3fc7"
-          }
-        }
-      },
       "https://livahoteis.sharepoint.com": {
         "dataSources": {
           "BD_LOG": {
@@ -83,14 +62,7 @@
       }
     },
     "dataSources": [
-      "BD_Industrial_training_Login",
-      "BD_Ind_train_Bib",
-      "BD_linked_training",
-      "BD_ind_exam",
-      "BD_Ind_Ans_Exam",
       "BD_Industries_Progress",
-      "BD_Ind_Stream",
-      "BD_Centros_Agri_Foods_PH",
       "BD_LOG",
       "BD_PRVS",
       "BD_RSPT_PRV",
@@ -100,35 +72,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "7647c7f2-351e-4f88-933e-2b08ad7dab5c"
-  },
-  "b8f0d00e-e530-491e-afb2-1a89ca6d04ba": {
-    "appActions": [
-      "providers/PowerPlatform.Governance/Operations/Read",
-      "providers/PowerPlatform.Governance/Operations/Write"
-    ],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1697/1.0.1697.3786/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {
-      "https://bungeltd.sharepoint.com/sites/controladoriadeoperacoes/controladoriaagribusiness/bdcontroladoria": {
-        "dataSources": {
-          "AVA_REACT_IND_ETM": {
-            "tableName": "33aeb9a1-7377-4a3c-9c1e-294a3ce2d635"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "AVA_REACT_IND_ETM"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "b8f0d00e-e530-491e-afb2-1a89ca6d04ba"
   },
   "fea62976-e4c7-4e13-815c-22c3b204a47c": {
     "appActions": [

@@ -1,12 +1,12 @@
 "Dash_Collab As screen.'autoLayout_Sidebar_ver1.0'":
-    BackgroundImage: ='999 (1)'
+    BackgroundImage: =DESKTOP
     Fill: =RGBA(0, 0, 0, 0)
     ImagePosition: =ImagePosition.Stretch
-    OnVisible: =Refresh(BD_linked_training);Refresh(BD_TRNMT)
+    OnVisible: =Refresh(BD_VCLO_COLAB);Refresh(BD_TRNMT)
 
     Image5 As image:
         Height: =Parent.Height
-        Image: ='BGStream (3) (1)'
+        Image: =DESKTOP
         ImagePosition: =ImagePosition.Fill
         Width: =Parent.Width
         ZIndex: =1
@@ -34,63 +34,6 @@
         RadiusTopRight: =0
         Width: =Parent.Width
         ZIndex: =3
-
-        Container56 As groupContainer.horizontalAutoLayoutContainer:
-            BorderStyle: =BorderStyle.None
-            DropShadow: =DropShadow.None
-            FillPortions: =0
-            Height: =30
-            LayoutAlignItems: =LayoutAlignItems.End
-            LayoutJustifyContent: =LayoutJustifyContent.End
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            ZIndex: =1
-
-            Label14_5 As label:
-                Align: =Align.Center
-                BorderStyle: =BorderStyle.None
-                Color: =RGBA(255, 255, 255, 1)
-                Font: ="Monteserrat"
-                FontWeight: =FontWeight.Lighter
-                Height: =30
-                LineHeight: =0.5
-                PaddingBottom: =0
-                PaddingLeft: =4
-                PaddingRight: =4
-                PaddingTop: =8
-                Size: =12
-                Text: ="Escola técnica "
-                Width: =111
-                X: =29
-                ZIndex: =1
-
-            Label14_6 As label:
-                BorderStyle: =BorderStyle.None
-                Color: =RGBA(255, 255, 255, 1)
-                Font: ="Monteserrat"
-                FontWeight: =FontWeight.Bold
-                Height: =30
-                LineHeight: =0.5
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingTop: =8
-                Size: =12
-                Text: ="de Moagem"
-                Width: =111
-                X: =140
-                ZIndex: =2
-
-            Image36 As image:
-                Height: =30
-                Image: ='Path 0 (1)'
-                PaddingTop: =8
-                Width: =29
-                ZIndex: =3
 
         HeaderContainer5 As groupContainer.horizontalAutoLayoutContainer:
             BorderStyle: =BorderStyle.None
@@ -153,7 +96,7 @@
                     DisabledBorderColor: =RGBA(232, 144, 226, 1)
                     DisplayMode: =DisplayMode.Disabled
                     Height: =60
-                    Image: =LookUp(BD_Industrial_training_Login,Matricula_var = varMatricula,Colaborador.Picture)
+                    Image: =User().Image
                     RadiusBottomLeft: =100
                     RadiusBottomRight: =100
                     RadiusTopLeft: =100
@@ -172,7 +115,7 @@
                     Font: ="Montserrat"
                     Height: =34
                     Size: =10
-                    Text: =LookUp(BD_Industrial_training_Login,Matricula_var = varMatricula,Título)
+                    Text: =User().Email
                     VerticalAlign: =VerticalAlign.Top
                     Visible: =false
                     Width: =90
@@ -195,7 +138,7 @@
                         Font: =Font.Lato
                         Height: =27
                         Size: =12
-                        Text: =Proper(LookUp(BD_Industrial_training_Login,Matricula_var = varMatricula,Colaborador.DisplayName))
+                        Text: =User().FullName
                         Width: |+
                             =Container10_3.Width - 80
                             
@@ -206,7 +149,7 @@
                     Label5_8 As label:
                         BorderStyle: =BorderStyle.None
                         Color: =RGBA(60, 100, 125, 1)
-                        DisabledColor: =RGBA(242, 126, 234, 1)
+                        DisabledColor: =RGBA(214, 74, 82, 1)
                         DisplayMode: =DisplayMode.Disabled
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Bold
@@ -226,7 +169,7 @@
                     Font: ="Montserrat"
                     Height: =34
                     Size: =12
-                    Text: =LookUp(BD_Industrial_training_Login,Título = varMatricula ,Email)
+                    Text: =User().Email
                     VerticalAlign: =VerticalAlign.Top
                     Visible: =false
                     Width: =236
@@ -239,7 +182,7 @@
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
                     Height: =64
-                    Image: =LookUp(BD_Industrial_training_Login,Matricula_var = varMatricula,Colaborador.Picture)
+                    Image: =User().Image
                     Name: =User().FullName
                     Shape: ='Avatar.Shape'.Square
                     Width: =64
@@ -255,7 +198,7 @@
                     Font: ="Montserrat"
                     Height: =34
                     Size: =10
-                    Text: =LookUp(BD_Industrial_training_Login,Título = varMatricula,Matricula_var)
+                    Text: =User().Email
                     VerticalAlign: =VerticalAlign.Top
                     Visible: =false
                     Width: =90
@@ -530,7 +473,7 @@
                             DelayItemLoading: =true
                             Fill: =RGBA(180, 214, 250, 1)
                             Height: =464
-                            Items: =Filter(BD_linked_training,Matricula = Label5_5.Text)
+                            Items: =Filter(BD_VCLO_COLAB,Aluno_email = User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplatePadding: =0
@@ -626,7 +569,7 @@
                             BorderStyle: =BorderStyle.None
                             DelayItemLoading: =true
                             Height: =Parent.Height - Label4.Height - 20
-                            Items: =Filter(BD_linked_training, Matricula = varMatricula)
+                            Items: =Filter(BD_VCLO_COLAB, Aluno_email = User().Email)
                             Layout: =Layout.Vertical
                             LoadingSpinner: =LoadingSpinner.Data
                             TemplatePadding: =0
@@ -1124,7 +1067,7 @@
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =12
-                                Text: =LookUp(BD_linked_training,MAP = Subtitle6.Text And Nome_Treinamento = Gallery3.Selected.Title6.Text, 1)
+                                Text: =LookUp(BD_VCLO_COLAB ,MAP = Subtitle7.Text And Nome_Treinamento = Gallery3.Selected.Title6.Text, 1)
                                 VerticalAlign: =VerticalAlign.Top
                                 Visible: =false
                                 Width: =344

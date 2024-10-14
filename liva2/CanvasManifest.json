@@ -102,7 +102,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 118,
+    "BindingErrorCount": 465,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 1000,
     "DocumentAppType": "DesktopOrTablet",
@@ -137,19 +137,16 @@
   },
   "ScreenOrder": [
     "Inicio-NV",
-    "Login",
     "Dash_Collab",
     "Mov",
     "Management",
     "do_exam_2",
     "edit_exam_done",
-    "Streaming",
     "Screen5",
     "edit_exam",
     "Screen1",
     "Screen2",
     "Screen3",
-    "Screen4",
-    "Screen6"
+    "Screen4"
   ]
 }
