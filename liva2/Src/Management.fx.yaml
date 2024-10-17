@@ -1739,9 +1739,10 @@
                                         Color: =RGBA(62, 128, 149, 1)
                                         DisplayFields: =["Value"]
                                         HoverBorderColor: =
+                                        IsSearchable: =false
                                         Items: =Sort(Distinct(BD_Industrial_training_Login,Gestor),SortOrder.Ascending)
                                         SearchFields: =["Value"]
-                                        SearchItems: =Search(Sort(Distinct(BD_Industrial_training_Login,Gestor),SortOrder.Ascending),ComboBox2_6.SearchText,Value)
+                                        SearchItems: =[]
                                         SelectionColor: =RGBA(204, 231, 246, 1)
                                         SelectionFill: =RGBA(12, 157, 201, 1)
                                         SelectMultiple: =false
@@ -3554,7 +3555,7 @@
                                     BorderThickness: =3
                                     Height: =45
                                     HoverBorderColor: =RGBA(71, 158, 245, 1)
-                                    Image: =LookUp(BD_TRNMT,Curso = Title5_4.Text,Capa.Full)
+                                    Image: =LookUp(BD_TRNMT,Curso = Title5_4.Text,Capa_Modulo.Full)
                                     ImagePosition: =ImagePosition.Fill
                                     OnSelect: =Select(Parent)
                                     RadiusBottomLeft: =2
@@ -3929,8 +3930,8 @@
                             =ForAll(
                                 Gallery4_8.AllItems,
                                 Patch(
-                                    BD_linked_training,
-                                    Defaults(BD_linked_training),
+                                    BD_VCLO_COLAB,
+                                    Defaults(BD_VCLO_COLAB),
                                     {},
                                     {IdTreinamento: Label12_6.Text},
                                     {Ano_treinamento: Year( Now() )},
@@ -3938,8 +3939,7 @@
                                     {Aluno_email: Label12_7.Text},
                                     {Coordenador: Label12_8.Text},
                                     {ID_Emailaluno: Label34.Text},
-                                    {Data_do_Vinculo:Today()},
-                                    {Matricula:Label33.Text}
+                                    {Data_do_Vinculo:Today()}
                                 )
                             );Clear(Vinculados);Clear(MyPeople);Set(varVinculo,false)
                         RadiusBottomLeft: =0

@@ -602,17 +602,16 @@
                             Image8 As image:
                                 BorderColor: =RGBA(15, 84, 140, 1)
                                 BorderThickness: =1
-                                Height: =Parent.TemplateHeight / 1.4
-                                Image: =LookUp(BD_TRNMT,Curso=Title6.Text,Capa)
+                                Height: =Parent.TemplateHeight / 1.3
+                                Image: =LookUp(BD_TRNMT,Curso=Title6.Text,Capa_Modulo.Full)
                                 ImagePosition: =ImagePosition.Fill
                                 OnSelect: =Select(Parent)
                                 RadiusBottomLeft: =4
                                 RadiusBottomRight: =4
                                 RadiusTopLeft: =4
                                 RadiusTopRight: =4
-                                Width: |
-                                    =150
-                                X: =16
+                                Width: =180
+                                X: =12
                                 Y: =(Parent.TemplateHeight - Image8.Height)/2
                                 ZIndex: =3
 
@@ -697,7 +696,7 @@
                                 DelayItemLoading: =true
                                 Fill: =RGBA(255, 255, 255, 1)
                                 Height: =59
-                                Items: =Filter(BD_Ind_Ans_Exam,Matricula=varMatricula ,Assistiu="1",Curso=Title6.Text)
+                                Items: =Filter(BD_RSPT_PRV,Aluno_email = User().Email ,Assistiu="1",Curso=Title6.Text)
                                 Layout: =Layout.Vertical
                                 LoadingSpinner: =LoadingSpinner.Data
                                 TemplatePadding: =0
@@ -894,7 +893,7 @@
                                 RailThickness: =5
                                 ShowValue: =false
                                 ValueFill: =RGBA(155, 200, 60, 1)
-                                Width: =Parent.TemplateWidth /1.50
+                                Width: =Parent.TemplateWidth /1.60
                                 X: =Image8.Width + Image8.X + 16
                                 Y: =95
                                 ZIndex: =18
@@ -1026,7 +1025,7 @@
                                 BorderStyle: =BorderStyle.None
                                 BorderThickness: =1
                                 Height: =Parent.TemplateHeight / 1.5
-                                Image: =ThisItem.Capa_trilha
+                                Image: =ThisItem.Capa_Curso
                                 ImagePosition: =ImagePosition.Stretch
                                 OnSelect: =Select(Parent)
                                 RadiusBottomLeft: =4
@@ -1123,7 +1122,7 @@
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =12
-                                Text: =ThisItem.Nome
+                                Text: =ThisItem.Trilha
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =Parent.TemplateWidth - Image13.Width - 50
                                 X: =180
@@ -1195,6 +1194,26 @@
                                 X: =639
                                 Y: =13
                                 ZIndex: =12
+
+                            Subtitle6_1 As label:
+                                BorderColor: =RGBA(0, 0, 0, 1)
+                                BorderStyle: =BorderStyle.None
+                                Color: =RGBA(255, 255, 255, 1)
+                                Font: =Font.'Lato Black'
+                                FontWeight: =FontWeight.Semibold
+                                Height: =Parent.TemplateHeight/1.6
+                                LineHeight: =1
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =8
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =12
+                                Text: =ThisItem.Trilha
+                                Width: =100
+                                X: =20
+                                Y: =23
+                                ZIndex: =13
 
                         Label4_2 As label:
                             BorderStyle: =BorderStyle.None
